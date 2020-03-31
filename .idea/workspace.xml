@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="60280f68-52c7-4552-82b0-2076267d89b5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +21,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="YagmurUlas &lt;yagmurulass@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1YzIW5FsgFKQWliMA0J2LbXYXe8" />
@@ -84,12 +88,24 @@
       <workItem from="1585144451383" duration="35023000" />
       <workItem from="1585495223937" duration="1770000" />
       <workItem from="1585664417324" duration="1110000" />
-      <workItem from="1585669013658" duration="1846000" />
+      <workItem from="1585669013658" duration="2409000" />
     </task>
+    <task id="LOCAL-00001" summary="header changed">
+      <created>1585680473749</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585680473749</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="header changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="header changed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585669060906">
@@ -104,6 +120,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="389" y="201" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.689@0.0.1280.689" timestamp="1585669511002" />
+    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1585680472948">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1585680472948" />
     <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1585664831130">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
