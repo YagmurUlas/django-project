@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.safestring import mark_safe
+from ckeditor_uploader.fields import RichTextUploadingField
 
 
 class Category(models.Model):
@@ -38,7 +39,7 @@ class Activity(models.Model):
     price = models.FloatField()
     person_number = models.IntegerField(blank=True, null=True)
     day_number = models.IntegerField(blank=True, null=True)
-    detail = models.TextField()
+    detail = RichTextUploadingField()
     status = models.CharField(max_length=10, choices=STATUS)
     parent = models.ForeignKey('self', blank=True, null=True, related_name='children', on_delete=models.CASCADE)
     create_at = models.DateTimeField(auto_now_add=True)
@@ -65,7 +66,7 @@ class Trip(models.Model):
     price = models.FloatField()
     person_number = models.IntegerField(blank=True, null=True)
     day_number = models.IntegerField(blank=True, null=True)
-    detail = models.TextField()
+    detail = RichTextUploadingField()
     status = models.CharField(max_length=10, choices=STATUS)
     parent = models.ForeignKey('self', blank=True, null=True, related_name='children', on_delete=models.CASCADE)
     create_at = models.DateTimeField(auto_now_add=True)

@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="60280f68-52c7-4552-82b0-2076267d89b5" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +31,7 @@
       </list>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1YzIW5FsgFKQWliMA0J2LbXYXe8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -88,7 +93,8 @@
       <workItem from="1585144451383" duration="35023000" />
       <workItem from="1585495223937" duration="1770000" />
       <workItem from="1585664417324" duration="1110000" />
-      <workItem from="1585669013658" duration="2409000" />
+      <workItem from="1585669013658" duration="3662000" />
+      <workItem from="1586355631767" duration="2341000" />
     </task>
     <task id="LOCAL-00001" summary="header changed">
       <created>1585680473749</created>
@@ -97,7 +103,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585680473749</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="header changed">
+      <created>1585680734782</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1585680734782</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,10 +121,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="header changed" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1585669060906">
+    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586357969755">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1585669060906" />
+    <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.689@0.0.1280.689" timestamp="1586357969755" />
     <state x="417" y="148" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1583942967250">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -120,10 +133,22 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="389" y="201" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.689@0.0.1280.689" timestamp="1585669511002" />
-    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1585680472948">
+    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1585680734147">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1585680472948" />
+    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1585680734147" />
+    <state x="421" y="100" key="FileChooserDialogImpl" timestamp="1586357974655">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="421" y="100" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1586357974655" />
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1586357951004">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1586357951004" />
+    <state x="450" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586357846243">
+      <screen x="0" y="0" width="1280" height="689" />
+    </state>
+    <state x="450" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.689@0.0.1280.689" timestamp="1586357846243" />
     <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1585664831130">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
