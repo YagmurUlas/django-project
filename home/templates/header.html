@@ -1,29 +1,103 @@
-<header>
-  <div class="container_12">
-    <div class="grid_12">
-        {% load static %}
-      <h1>Gezi ve Aktivite Site sss<a href=index.html"><img src="{% static "images/logo.png" %}" alt=""></a></h1>
-      <div class="clear"></div>
+{% load static %}
+<div id="body-bg">
+    <ul class="social-icons pull-right hidden-xs">
+        <li class="social-rss">
+            <a href="#" target="_blank" title="RSS"></a>
+        </li>
+        <li class="social-twitter">
+            <a href="#" target="_blank" title="Twitter"></a>
+        </li>
+        <li class="social-facebook">
+            <a href="#" target="_blank" title="Facebook"></a>
+        </li>
+        <li class="social-googleplus">
+            <a href="#" target="_blank" title="GooglePlus"></a>
+        </li>
+    </ul>
+    <div id="pre-header" class="container" >
     </div>
-    <div class="menu_block">
-      <nav>
-        <ul class="sf-menu">
-          <li class="current"><a href="index.html">Home</a></li>
-          <li class="with_ul"><a href= "about.html">About</a>
-            <ul>
-              <li><a href="#">Agency</a></li>
-              <li><a href="#">News</a></li>
-              <li><a href= "#">Team</a></li>
-            </ul>
-          </li>
-          <li><a href= "gallery.html">Gallery</a></li>
-          <li><a href= "tours.html">Tours</a></li>
-          <li><a href= "blog.html">Blog</a></li>
-          <li><a href=  "contacts.html">Contacts</a></li>
-        </ul>
-      </nav>
-      <div class="clear"></div>
+    <div id="header">
+        <div class="container">
+            <div class="row">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="/" title="">
+                        <img src="{% static "assets/img/logo.png" %}" alt="Logo" />
+                    </a>
+                </div>
+                <!-- End Logo -->
+            </div>
+        </div>
     </div>
-    <div class="clear"></div>
-  </div>
-</header>
+    <!-- Top Menu -->
+
+    <div id="hornav" class="container no-padding">
+        <div class="row">
+            <div class="col-md-12 no-padding">
+                <div class="text-center visible-lg">
+                    <ul id="hornavmenu" class="nav navbar-nav">
+                        <li>
+                            <a href="/" class="fa-home"><b>Home</b></a>
+                        </li>
+                        <li>
+                            <span class="fa-gears">Features</span>
+                            <ul>
+                                <li class="parent">
+                                    <span>Typography</span>
+                                    <ul>
+                                        <li>
+                                            <a href="features-typo-basic.html">Basic Typography</a>
+                                        </li>
+                                        <li>
+                                            <a href="features-typo-blockquotes.html">Blockquotes</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <span>Components</span>
+                                </li>
+                                <li class="parent">
+                                    <span>Icons</span>
+                                </li>
+                                <li>
+                                    <a href="features-testimonials.html">Testimonials</a>
+                                </li>
+                                <li>
+                                    <a href="features-accordions-tabs.html">Accordions & Tabs</a>
+                                </li>
+
+                                <li>
+                                    <a href="features-animate-on-scroll.html">Animate On Scroll</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="/about" class="fa-home"><b>ABOUT</b></a>
+                        </li>
+                        <li>
+                            <span class="fa-th">REFERENCES</span>
+
+                        </li>
+                        <li>
+                            <span class="fa-font">Blog</span>
+                            <ul>
+                                <li>
+                                    <a href="blog-list.html">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="blog-single.html">Blog Single Item</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="fa-comment">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Top Menu -->
+
+    <div id="content-top-border" class="container">
+    </div>
