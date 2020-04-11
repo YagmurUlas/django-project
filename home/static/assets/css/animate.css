@@ -406,7 +406,7 @@ Copyright (c) 2013 Daniel Eden
   }
 
   70% {
-    -webkit-transform: scale(animated.9);
+    -webkit-transform: scale(.animated.9);
     transform: scale(.animated.9);
   }
 

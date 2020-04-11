@@ -1,0 +1,85 @@
+{% extends 'homebase.html' %}
+
+{% block title %} Contact - {{ setting.company }} {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+
+{% block head %}
+    <link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
+{% endblock %}
+
+{% block content %}
+    <div id="content">
+        <div class="container background-white">
+            <div class="row margin-vert-30">
+                <!-- Main Column -->
+                <div class="col-md-6">
+                    <!-- Main Content -->
+                    <div class="headline">
+                        <h2>Contact Form</h2>
+                    </div>
+
+                    <br>
+                    <!-- Contact Form -->
+                    {% if messages %}
+                        {% for message in messages %}
+                            <div class="alert alert-{{ message.tags }}" role="alert">
+                                {{ message }}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+                <form action="" method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <input type="submit" value="SEND FORM">
+                </form>
+                    <!-- End Contact Form -->
+
+                </div>
+                <!-- End Main Column -->
+                <!-- Side Column -->
+                <div class="col-md-6" style="margin-left: ">
+                    <!-- Recent Posts -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Contact Info</h3>
+                        </div>
+                        <div class="panel-body">
+                            <p>{{ setting.contact |safe }} </p>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <i class="fa-phone color-primary"></i>+353-44-55-66</li>
+                                <li>
+                                    <i class="fa-envelope color-primary"></i>info@example.com</li>
+                                <li>
+                                    <i class="fa-home color-primary"></i>http://www.example.com</li>
+                            </ul>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <strong class="color-primary">Monday-Friday:</strong>9am to 6pm</li>
+                                <li>
+                                    <strong class="color-primary">Saturday:</strong>10am to 3pm</li>
+                                <li>
+                                    <strong class="color-primary">Sunday:</strong>Closed</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End recent Posts -->
+                    <!-- About -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">About</h3>
+                        </div>
+                        <div class="panel-body">
+                            {{ setting.aboutus |safe }}
+                        </div>
+                    </div>
+                    <!-- End About -->
+                </div>
+                <!-- End Side Column -->
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
