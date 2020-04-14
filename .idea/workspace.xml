@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60280f68-52c7-4552-82b0-2076267d89b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/migrations/0005_auto_20200410_1800.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/templates/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/templates/references.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/migrations/0016_auto_20200410_1800.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home - Kısayol.lnk" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/assets/css/animate.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/assets/css/animate.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/assets/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/assets/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_project/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +133,8 @@
       <workItem from="1586437355063" duration="9600000" />
       <workItem from="1586455241727" duration="6042000" />
       <workItem from="1586473227318" duration="1661000" />
-      <workItem from="1586521086362" duration="14048000" />
+      <workItem from="1586521086362" duration="14829000" />
+      <workItem from="1586896157061" duration="4929000" />
     </task>
     <task id="LOCAL-00001" summary="header changed">
       <created>1585680473749</created>
@@ -174,7 +164,21 @@
       <option name="project" value="LOCAL" />
       <updated>1586524018380</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="contact form added">
+      <created>1586632404466</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1586632404466</updated>
+    </task>
+    <task id="LOCAL-00006" summary="contact form added">
+      <created>1586632568287</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1586632568287</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +189,8 @@
     <MESSAGE value="header changed" />
     <MESSAGE value="ck-editor added" />
     <MESSAGE value="changed template again" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed template again" />
+    <MESSAGE value="contact form added" />
+    <option name="LAST_COMMIT_MESSAGE" value="contact form added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="4" key="#Inspections" timestamp="1586438613864">
@@ -204,34 +209,34 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="389" y="201" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.689@0.0.1280.689" timestamp="1585669511002" />
-    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1586632419074">
+    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1586632567720">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1586632419074" />
+    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1586632567720" />
     <state x="421" y="100" key="FileChooserDialogImpl" timestamp="1586357974655">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="421" y="100" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1586357974655" />
-    <state width="1237" height="166" key="GridCell.Tab.0.bottom" timestamp="1586543302758">
+    <state width="1237" height="166" key="GridCell.Tab.0.bottom" timestamp="1586717286553">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1586543302758" />
-    <state width="1237" height="166" key="GridCell.Tab.0.center" timestamp="1586543302758">
+    <state width="1237" height="166" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1586717286553" />
+    <state width="1237" height="166" key="GridCell.Tab.0.center" timestamp="1586717286553">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1586543302758" />
-    <state width="1237" height="166" key="GridCell.Tab.0.left" timestamp="1586543302757">
+    <state width="1237" height="166" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1586717286553" />
+    <state width="1237" height="166" key="GridCell.Tab.0.left" timestamp="1586717286551">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1586543302757" />
-    <state width="1237" height="166" key="GridCell.Tab.0.right" timestamp="1586543302758">
+    <state width="1237" height="166" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1586717286551" />
+    <state width="1237" height="166" key="GridCell.Tab.0.right" timestamp="1586717286553">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1586543302758" />
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1586524022355">
+    <state width="1237" height="166" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1586717286553" />
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1586632572184">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1586524022355" />
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1586632572184" />
     <state x="450" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586357846243">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
