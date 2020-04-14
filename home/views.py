@@ -8,7 +8,7 @@ from product.models import Trip
 
 def index(request):
     setting = Setting.objects.get(pk=1)
-    sliderdata = Trip.objects.all()[:4]
+    sliderdata = Trip.objects.all()[:3]
     context = {'setting': setting,
                'page': 'home',
                'sliderdata':sliderdata}
