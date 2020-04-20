@@ -29,17 +29,32 @@
     </div>
     <!-- Top Menu -->
 
-    <div id="hornav" class="container no-padding">
+    <div id="hornav" {% if not node.is_leaf_node %} class="container no-padding" {% endif %}>
         <div class="row">
             <div class="col-md-12 no-padding">
                 <div class="text-center visible-lg">
-                    <ul id="hornavmenu" class="nav navbar-nav">
+                    <ul id="hornavmenu" {% if not node.is_leaf_node %} class="nav navbar-nav" {% endif %}>
                         <li>
                             <a href="/" class="fa-home"><b>Home</b></a>
                         </li>
                         <li>
-                            <span class="fa-gears">Features</span>
+                            <span class="fa-gears">Categories</span>
                             <ul>
+                                {% load mptt_tags %}
+                                {% recursetree category %}
+                                    <li class="parent">
+                                        <a href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                        {% if not node.is_leaf_node %}
+                                            <ul>
+                                                <li>
+                                                   {{ children }}
+                                                </li>
+                                            </ul>
+                                        {% endif %}
+                                    </li>
+                                {% endrecursetree %}
+
+
                                 <li class="parent">
                                     <span>Typography</span>
                                     <ul>
@@ -50,15 +65,6 @@
                                             <a href="features-typo-blockquotes.html">Blockquotes</a>
                                         </li>
                                     </ul>
-                                </li>
-                                <li class="parent">
-                                    <span>Components</span>
-                                </li>
-                                <li class="parent">
-                                    <span>Icons</span>
-                                </li>
-                                <li>
-                                    <a href="features-testimonials.html">Testimonials</a>
                                 </li>
                                 <li>
                                     <a href="features-accordions-tabs.html">Accordions & Tabs</a>
@@ -73,7 +79,7 @@
                             <a href="/about" class="fa-home">ABOUT</a>
                         </li>
                         <li>
-                             <a href="/references" class="fa-th">REFERENCES</a>
+                            <a href="/references" class="fa-th">REFERENCES</a>
 
                         </li>
                         <li>

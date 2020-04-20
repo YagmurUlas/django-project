@@ -1,6 +1,7 @@
 <div class="content">
     <div class="container no-padding">
         <div class="row">
+            {% load static %}
             <!-- Carousel Slideshow -->
             <div id="carousel-example" class="carousel slide" data-ride="carousel">
                 <!-- Carousel Indicators -->
@@ -11,11 +12,15 @@
                 </ol>
                 <div class="clearfix"></div>
                 <!-- End Carousel Indicators -->
-                <!-- Carousel Images slider boyutlar 1080 x 300-->
+                <!-- Carousel Images slider boyutlar 1080 x 300 ekle link /product/{{ rs.id }}/{{ rs.slug }}-->
                 <div class="carousel-inner">
                     {% for rs in sliderdata %}
                         <div class="item {% if forloop.counter == 1 %}active{% endif %}" id="slide{{ forloop.counter }}">
                             <img src="{{ rs.image.url }}" style="width: 1080px; height: 300px">
+                            <div class="carousel-caption" style="margin-bottom: -25px">
+                                <h2 style="color: white ">{{ rs.title }}</h2>
+                                <p>{{ rs.description }}</p>
+                            </div>
                         </div>
                     {% endfor %}
                 </div>
