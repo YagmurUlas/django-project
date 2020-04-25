@@ -2,39 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60280f68-52c7-4552-82b0-2076267d89b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/migrations/0006_auto_20200416_1444.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/templates/products.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/migrations/0017_auto_20200416_1444.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/migrations/0018_auto_20200420_0006.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/altınkum_5YyT6yE.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/bodrum.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/bodrum_y1xytQM.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/didim_ezxlSWy.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/didim_sb1KcaE.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/icon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/lake.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/swim_sea_mrmqSuU.jfif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/swim_sea_wJZ5s9F.jfif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/train.jfif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/trek_3DerLss.jfif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/trek_KZxIfnE.jfif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/trekking_J6TIZoH.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/trekking_wEbfFcX.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/trekking_wPznBba.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/winter.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/winter2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/winter3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/winter3_M5RTUNe.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/uploads/winter.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/product_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/migrations/0019_activity_slug.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/migrations/0020_product_slug.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/migrations/0021_auto_20200424_2307.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/migrations/0022_auto_20200424_2310.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/migrations/0023_auto_20200425_1324.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/migrations/0024_product_shortdetail.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/migrations/0025_auto_20200425_1420.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/migrations/0026_remove_comment_rate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/alacati.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/altınkum_4ZhpLiX.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/altınkum_9gS9H05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/didim-altinkum.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/didim-altinkum_pJ7etnU.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/didim-apollon-tapinagi-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/didim-sapli-ada.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/didim_I4FdVEO.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/didim_milet.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/swim_sea_l7hJAoQ.jfif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/assets/css/nexus.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/assets/css/nexus.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/static/assets/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/assets/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_project/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_project/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +87,29 @@
       <recent name="C:\Django\my_project\trip" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.views">
+  <component name="RunManager" selected="Python.deneme">
+    <configuration name="deneme" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="my_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/deneme.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="views" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="my_project" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -136,6 +157,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.deneme" />
         <item itemvalue="Python.views" />
       </list>
     </recent_temporary>
@@ -164,7 +186,9 @@
       <workItem from="1586521086362" duration="14829000" />
       <workItem from="1586896157061" duration="22433000" />
       <workItem from="1587321267496" duration="8941000" />
-      <workItem from="1587392711740" duration="236000" />
+      <workItem from="1587392711740" duration="5018000" />
+      <workItem from="1587476545757" duration="2753000" />
+      <workItem from="1587497488662" duration="39553000" />
     </task>
     <task id="LOCAL-00001" summary="header changed">
       <created>1585680473749</created>
@@ -222,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586902766037</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="categories added to home">
+      <created>1587393123111</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587393123111</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +267,8 @@
     <MESSAGE value="contact form added" />
     <MESSAGE value="slider changed" />
     <MESSAGE value="sliderchanged" />
-    <option name="LAST_COMMIT_MESSAGE" value="sliderchanged" />
+    <MESSAGE value="categories added to home" />
+    <option name="LAST_COMMIT_MESSAGE" value="categories added to home" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="4" key="#Inspections" timestamp="1586438613864">
@@ -255,44 +287,45 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="389" y="201" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.689@0.0.1280.689" timestamp="1585669511002" />
-    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1586902765381">
+    <state x="265" y="0" key="CommitChangelistDialog2" timestamp="1587393121754">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1586902765381" />
-    <state x="421" y="100" key="FileChooserDialogImpl" timestamp="1586357974655">
+    <state x="265" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1587393121754" />
+    <state x="421" y="100" key="FileChooserDialogImpl" timestamp="1587472567154">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="421" y="100" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1586357974655" />
-    <state width="1237" height="166" key="GridCell.Tab.0.bottom" timestamp="1586717286553">
+    <state x="421" y="100" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1587472567154" />
+    <state width="596" height="166" key="GridCell.Tab.0.bottom" timestamp="1587479648827">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1586717286553" />
-    <state width="1237" height="166" key="GridCell.Tab.0.center" timestamp="1586717286553">
+    <state width="596" height="166" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1587479648827" />
+    <state width="596" height="166" key="GridCell.Tab.0.center" timestamp="1587479648827">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1586717286553" />
-    <state width="1237" height="166" key="GridCell.Tab.0.left" timestamp="1586717286551">
+    <state width="596" height="166" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1587479648827" />
+    <state width="596" height="166" key="GridCell.Tab.0.left" timestamp="1587479648827">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1586717286551" />
-    <state width="1237" height="166" key="GridCell.Tab.0.right" timestamp="1586717286553">
+    <state width="596" height="166" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1587479648827" />
+    <state width="596" height="166" key="GridCell.Tab.0.right" timestamp="1587479648827">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="1237" height="166" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1586717286553" />
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1586902769530">
+    <state width="596" height="166" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1587479648827" />
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1587393126504">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1586902769530" />
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1587393126504" />
     <state x="450" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586357846243">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="450" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.689@0.0.1280.689" timestamp="1586357846243" />
-    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1585664831130">
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup" timestamp="1587811099638">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1585664831130" />
+    <state x="303" y="10" width="672" height="678" key="search.everywhere.popup/0.0.1280.689@0.0.1280.689" timestamp="1587811099638" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/my_project$deneme.coverage" NAME="deneme Coverage Results" MODIFIED="1587478541812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/my_project$views.coverage" NAME="views Coverage Results" MODIFIED="1586543299381" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/home" />
   </component>
 </project>

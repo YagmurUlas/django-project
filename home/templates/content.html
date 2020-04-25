@@ -5,104 +5,130 @@
         <div class="row margin-vert-30">
             <!-- Main Text -->
             <div class="col-md-12">
+
                 <h2 class="text-center">Welcome to LifeStyle</h2>
                 <p class="text-center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
                     lobortis nisl ut aliquip ex ea commodo consequat.</p>
                 <p class="text-center">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit
                     augue duis dolore te feugait nulla facilisi. Cras non sem sem, at eleifend mi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Curabitur eget nisl
                     a risus.</p>
+                <div id="carousel-example-2" class="carousel slide alternative" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel-example-2" data-slide-to="1"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-md-3"><img src=" {% static "/assets/img/portfolio/image1.jpg" %}" style="max-width:100%;"></div>
+                                <div class="col-md-3"><img src=" {% static "/assets/img/portfolio/image2.jpg" %}" style="max-width:100%;"></div>
+                                <div class="col-md-3"><img src=" {% static "/assets/img/portfolio/image3.jpg" %}" style="max-width:100%;"></div>
+                                <div class="col-md-3"><img src=" {% static "/assets/img/portfolio/image4.jpg" %}" style="max-width:100%;"></div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-md-3"><img src=" {% static "/assets/img/portfolio/image5.jpg" %}" style="max-width:100%;"></div>
+                                <div class="col-md-3"><img src=" {% static "/assets/img/portfolio/image6.jpg" %}" style="max-width:100%;"></div>
+                                <div class="col-md-3"><img src=" {% static "/assets/img/portfolio/image7.jpg" %}" style="max-width:100%;"></div>
+                                <div class="col-md-3"><img src=" {% static "/assets/img/portfolio/image8.jpg" %}" style="max-width:100%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-2" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-2" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
             </div>
             <!-- End Main Text -->
         </div>
     </div>
-    <div class="container background-gray-lighter">
-        <div class="row padding-vert-20">
-            <div class="col-md-12">
-                <!-- Portfolio -->
-                <ul>
-                    <!-- Portfolio Item -->
-                    <li class="portfolio-item col-sm-6 col-xs-6 padding-20">
-                        <a href="#">
-                            <figure class="animate fadeInLeft">
-                                <img alt="image1" src=" {% static "assets/img/frontpage/image1.jpg" %}">
-                                <figcaption>
-                                    <h3>Placerat facer possim</h3>
-                                    <span>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui et everti tamquam suavitate mea.</span>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <!-- //Portfolio Item// -->
-                    <!-- Portfolio Item -->
-                    <li class="portfolio-item col-sm-6 col-xs-6 padding-20">
-                        <a href="#">
-                            <figure class="animate fadeInRight">
-                                <img alt="image2" src="{% static "assets/img/frontpage/image2.jpg" %}">
-                                <figcaption>
-                                    <h3>Placerat facer possim</h3>
-                                    <span>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui et everti tamquam suavitate mea.</span>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <!-- //Portfolio Item// -->
-                    <!-- Portfolio Item -->
-                    <li class="portfolio-item col-sm-6 col-xs-6 padding-20">
-                        <a href="#">
-                            <figure class="animate fadeInLeft">
-                                <img alt="image3" src="{% static "assets/img/frontpage/image3.jpg" %}">
-                                <figcaption>
-                                    <h3>Placerat facer possim</h3>
-                                    <span>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui et everti tamquam suavitate mea.</span>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <!-- //Portfolio Item// -->
-                    <!-- Portfolio Item -->
-                    <li class="portfolio-item col-sm-6 col-xs-6 padding-20">
-                        <a href="#">
-                            <figure class="animate fadeInRight">
-                                <img alt="image4" src="{% static "assets/img/frontpage/image4.jpg" %}">
-                                <figcaption>
-                                    <h3>Placerat facer possim</h3>
-                                    <span>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui et everti tamquam suavitate mea.</span>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <!-- //Portfolio Item// -->
-                    <!-- Portfolio Item -->
-                    <li class="portfolio-item col-sm-6 col-xs-6 padding-20">
-                        <a href="#">
-                            <figure class="animate fadeInLeft">
-                                <img alt="image5" src="{% static "assets/img/frontpage/image5.jpg" %}">
-                                <figcaption>
-                                    <h3>Placerat facer possim</h3>
-                                    <span>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui et everti tamquam suavitate mea.</span>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <!-- //Portfolio Item// -->
-                    <!-- Portfolio Item -->
-                    <li class="portfolio-item col-sm-6 col-xs-6 padding-20">
-                        <a href="#">
-                            <figure class="animate fadeInRight">
-                                <img alt="image6" src="{% static "assets/img/frontpage/image6.jpg" %}">
-                                <figcaption>
-                                    <h3>Placerat facer possim</h3>
-                                    <span>Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui et everti tamquam suavitate mea.</span>
-                                </figcaption>
-                            </figure>
-                        </a>
-                    </li>
-                    <!-- //Portfolio Item// -->
-                </ul>
-                <!-- End Portfolio -->
+
+    <div id="content">
+        <div class="container background-white">
+            <div class="row margin-vert-30">
+                <div class="col-md-12">
+                    <h2 class="animate fadeIn text-center">TRIPS AND ACTIVITIES</h2>
+                    <!-- Filter Buttons -->
+                    <div class="portfolio-filter-container margin-top-20 text-center">
+                        <ul class="portfolio-filter">
+                            <li class="portfolio-filter-label label label-primary">
+                                filter by:
+                            </li>
+                            <li>
+                                <a href="#" class="portfolio-selected btn btn-default" data-filter="*">All</a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-default" data-filter=".trips">Trips</a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-default" data-filter=".activities">Activities</a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-default" data-filter=".asya">Asya</a>
+                            </li>
+                            <li>
+                                <a href="#" class="btn btn-default" data-filter=".amerika">Amerika</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Filter Buttons -->
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-md-12 portfolio-group no-padding">
+                    {% for rs in dayproducts %}
+                        <!-- Portfolio Item -->
+                        <div class="col-md-3 portfolio-item margin-bottom-40 trips" style="margin-left: 45px;">
+                            <div>
+                                <a href="/product/{{ rs.id }}/{{ rs.slug }}">
+                                    <figure>
+                                        <img src=" {{ rs.image.url }}" style="height:160px" alt="image1">
+                                        <figcaption>
+                                            <h3 class="margin-top-20">{{ rs.title }}</h3>
+                                            <span>{{ rs.title }}</span>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- End Portfolio Item -->
+                    {% endfor %}
+                </div>
+             <h2 class="animate fadeIn text-center">LAST TRIPS</h2><br>
+                    <div class="col-md-12 portfolio-group no-padding">
+                    {% for rs in lastproducts %}
+                        <!-- Portfolio Item -->
+                        <div class="col-md-3 portfolio-item margin-bottom-40 activities" style="margin-left: 45px;">
+                            <div>
+                                <a href="/product/{{ rs.id }}/{{ rs.slug }}">
+                                    <figure>
+                                        <img src=" {{ rs.image.url }}" style="height:160px" alt="image1">
+                                        <figcaption>
+                                            <h3 class="margin-top-20">{{ rs.title }}</h3>
+                                            <span>{{ rs.title }}</span>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- End Portfolio Item -->
+                    {% endfor %}
+                </div>
+
+
+                </div>
             </div>
         </div>
     </div>
+    <!-- === END CONTENT === -->
     <div class="container background-white">
         <div class="row padding-vert-40">
             <div class="col-md-12">
@@ -114,7 +140,5 @@
             </div>
         </div>
     </div>
-</div>
-
 
 <!-- === END CONTENT === -->

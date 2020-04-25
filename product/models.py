@@ -1,4 +1,6 @@
+from django.contrib.auth.models import User
 from django.db import models
+from django.forms import ModelForm
 from django.utils.safestring import mark_safe
 from ckeditor_uploader.fields import RichTextUploadingField
 from mptt.fields import TreeForeignKey
@@ -46,6 +48,7 @@ class Activity(models.Model):
     title = models.CharField(max_length=50)
     keywords = models.CharField(max_length=255)
     description = models.CharField(max_length=255)
+    slug = models.SlugField(blank=True)
     image = models.ImageField(blank=True, upload_to='images/')
     price = models.FloatField()
     person_number = models.IntegerField(blank=True, null=True)
@@ -72,11 +75,13 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)  # relation with Category table
     title = models.CharField(max_length=50)
     keywords = models.CharField(max_length=255)
-    description = models.CharField(max_length=255)
+    description = RichTextUploadingField()
+    slug = models.SlugField(blank=True)
     image = models.ImageField(blank=True, upload_to='images/')
     price = models.FloatField()
     person_number = models.IntegerField(blank=True, null=True)
     day_number = models.IntegerField(blank=True, null=True)
+    shortDetail = RichTextUploadingField(max_length=1400)
     detail = RichTextUploadingField()
     status = models.CharField(max_length=10, choices=STATUS)
     parent = models.ForeignKey('self', blank=True, null=True, related_name='children', on_delete=models.CASCADE)
@@ -91,8 +96,8 @@ class Product(models.Model):
     image_tag.short_description = "Image"
 
 
-class ImageTrip(models.Model):
-    trip = models.ForeignKey(Product, on_delete=models.CASCADE)
+class Images(models.Model):
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
     title = models.CharField(max_length=50, blank=True)
     image = models.ImageField(blank=True, upload_to='images/')
 
@@ -107,3 +112,30 @@ class ImageActivity(models.Model):
 
     def __str__(self):
         return self.title
+
+
+class Comment(models.Model):
+    STATUS = (
+        ('New', 'Yeni'),
+        ('True', 'Yes'),
+        ('False', 'No'),
+    )
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
+    subject = models.CharField(max_length=50, blank=True)
+    comment = models.TextField(max_length=200,blank=True)
+    status = models.CharField(max_length=10,choices=STATUS,default='New')
+    ip = models.CharField(blank=True, max_length=20)
+    create_at = models.DateTimeField(auto_now_add=True)
+    update_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return self.subject
+
+class CommentForm(ModelForm):
+    class Meta:
+        model = Comment
+        fields = ['subject', 'comment']
+
+
+

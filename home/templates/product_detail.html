@@ -1,0 +1,181 @@
+{% extends 'homebase.html' %}
+
+{% block title %} {{ product.title }} {% endblock %}
+{% block keywords %} {{ product.keywords }} {% endblock %}
+{% block description %} {{ product.description }} {% endblock %}
+
+{% block head %}
+    <link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
+{% endblock %}
+
+{% block content %}
+
+    <!-- === BEGIN CONTENT === -->
+    <div id="content">
+        <div class="container background-white">
+            <div class="row margin-vert-30">
+                <!-- Main Column -->
+                <div class="col-md-12">
+                    <div class="blog-post">
+                        <div id="breadcrumb">
+                            <div class="content">
+                                <ul class = "breadcrumb">
+                                    <li><a href="/">Home</a></li>
+                                    <li><a href="#">Products</a></li>
+                                    <li><a href="/category/{{ product.category_id }}/{{ product.category.slug }}">{{ product.category }}</a></li>
+                                    <li class="active">{{ product.title }}</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="blog-item">
+                            <h2>{{ product.title }}</h2>
+                            <div class="clearfix"></div>
+                            <div class="blog-post-body row margin-top-15">
+                                <div class="col-md-6">
+                                    <!-- Carousel Slideshow -->
+                                    <div class="panel panel-info fa-border">
+                                        <div id="carousel-example" class="carousel slide" data-ride="carousel">
+                                            <!-- Carousel Indicators -->
+                                            <ol class="carousel-indicators">
+                                                <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
+                                                <li data-target="#carousel-example" data-slide-to="1"></li>
+                                                <li data-target="#carousel-example" data-slide-to="2"></li>
+                                            </ol>
+                                            <div class="clearfix"></div>
+                                            <!-- End Carousel Indicators -->
+                                            <div class="carousel-inner">
+                                                <div class="item active"><img src="{{ product.image.url }}" style="height:300px; width: 700px"></div>
+                                                {% for rs in images %}
+                                                    <div class="item {% if forloop.counter == 1 %}{% endif %}" id="slide{{ forloop.counter }}">
+                                                        <img src="{{ rs.image.url }}" style="width: 1080px; height: 300px">
+                                                        <div class="carousel-caption" style="margin-bottom: -25px">
+                                                            <h2 style="color: white ">{{ rs.title }}</h2>
+                                                            <p>{{ rs.description }}</p>
+                                                        </div>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+                                            <!-- End Carousel Images -->
+                                            <!-- Carousel Controls -->
+                                            <a class="left carousel-control" href="#carousel-example" data-slide="prev">
+                                                <span class="glyphicon glyphicon-chevron-left"></span>
+                                            </a>
+                                            <a class="right carousel-control" href="#carousel-example" data-slide="next">
+                                                <span class="glyphicon glyphicon-chevron-right"></span>
+                                            </a>
+                                            <!-- End Carousel Controls -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <p style="margin-top: -10px">{{ product.shortDetail|safe }}</p>
+                                </div>
+
+                                <!--tab section -->
+                                <div class="col-md-12">
+                                    <div class="tabs alternative">
+                                        <ul class="nav nav-tabs">
+                                            <li class="active">
+                                                <a href="#sample-2a" data-toggle="tab">DETAILS</a>
+                                            </li>
+                                            <li>
+                                                <a href="#sample-2b" data-toggle="tab">REVIEWS</a>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade in active" id="sample-2a">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <h3 class="no-margin no-padding">{{ product.title|safe }}</h3>
+                                                        <p>{{ product.detail|safe }}</p>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="panel panel-info">
+                                                            <div class="panel-heading">
+                                                                <h3 class="panel-title">Ortalama Ücret Bilgisi</h3>
+                                                            </div>
+                                                            <div class="panel-body">
+                                                                Day Number: {{ product.day_number|safe }}
+                                                                Person Number: {{ product.person_number|safe }}
+                                                                Price: {{ product.price|safe }}
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade in" id="sample-2b">
+                                                <!-- Comments -->
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="col-md-6">
+                                                            <div class="panel-heading">
+                                                                <h2>Comments</h2>
+                                                            </div>
+                                                            <ul class="list-group">
+                                                                {% for rs in comments %}
+                                                                    <!-- one comment start -->
+                                                                    <li class="list-group-item">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <div><i class="fa fa-user color-gray"></i> <b>{{ rs.user.first_name }}</b>
+                                                                                <i class="fa fa-clock-o color-gray-light"></i>{{rs.create_at}}</div>
+                                                                                <h4>{{ rs.subject }}</h4>
+                                                                                <p>{{ rs.comment }}</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </li>
+                                                                    <!-- one comment end -->
+                                                                {% endfor %}
+                                                                <!-- Comment Form -->
+                                                            </ul>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <div class="panel-heading">
+                                                                <h2>Write Your Reviews</h2>
+                                                            </div>
+
+                                                            {% if messages %}
+                                                                {% for message in messages %}
+                                                                    <div class="panel panel-red invert {{ message.tags }}" role="alert">
+                                                                        {{ message }}
+                                                                    </div>
+                                                                {% endfor %}
+                                                            {% endif %}
+                                                            <form class="review-form" action="/product/addcomment/{{ product.id }}" method="post">
+                                                                {% csrf_token %}
+                                                                <div class="form-group">
+                                                                    <label>Subject</label>
+                                                                    <br> <input class="input" type="text" name="subject" id="id_subject" placeholder="add your subject">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label>Comment</label>
+                                                                    <textarea class="input" name="comment" id="id_comment" placeholder="Your review" rows="6" cols="50"></textarea>
+                                                                </div>
+                                                                {% if user.id is not None %}
+                                                                    <p><button class="btn btn-primary" type="submit">Send Message</button></p>
+                                                                {% else %}
+                                                                    Yorum eklemek için <a href="/login">Login</a> olunuz!
+                                                                {% endif %}
+                                                            </form>
+                                                        </div>
+                                                        <!-- End Comment Form -->
+                                                    </div>
+                                                </div>
+                                                <!-- End Comments -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Blog Post -->
+                        </div>
+                        <!-- Recent Posts -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}
+

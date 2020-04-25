@@ -3,11 +3,11 @@ from typing import List
 from django.contrib import admin
 from mptt.admin import MPTTModelAdmin, DraggableMPTTAdmin
 
-from product.models import Category, Activity, Product, ImageTrip, ImageActivity
+from product.models import Category, Activity, Product, Images, ImageActivity, Comment
 
 
 class TripImageInline(admin.TabularInline):
-    model = ImageTrip
+    model = Images
     extra = 5
 
 
@@ -38,8 +38,8 @@ class ProductAdmin(admin.ModelAdmin):
     inlines = [TripImageInline]
 
 
-class ImageTripAdmin(admin.ModelAdmin):
-    list_display = ['title', 'trip', 'image']
+class ImagesAdmin(admin.ModelAdmin):
+    list_display = ['title', 'product', 'image']
 
 
 class ImageActivityAdmin(admin.ModelAdmin):
@@ -79,9 +79,13 @@ class CategoryAdmin2(DraggableMPTTAdmin):
         return instance.products_cumulative_count
     related_products_cumulative_count.short_description = 'Related products (in tree)'
 
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ['subject', 'comment', 'product','user', 'status']
+    list_filter = ['status']
+
+
 
 admin.site.register(Category, CategoryAdmin2)
-admin.site.register(Activity, ActivityAdmin)
 admin.site.register(Product, ProductAdmin)
-admin.site.register(ImageTrip, ImageTripAdmin)
-admin.site.register(ImageActivity, ImageActivityAdmin)
+admin.site.register(Images, ImagesAdmin)
+admin.site.register(Comment, CommentAdmin)

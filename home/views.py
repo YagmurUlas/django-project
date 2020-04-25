@@ -4,18 +4,25 @@ from django.shortcuts import render
 
 # Create your views here.
 from home.models import Setting, ContactFormMessage, ContactForm
-from product.models import Product, Category
+from product.models import Product, Category, Images, Comment
 
 
 def index(request):
     setting = Setting.objects.get(pk=1)
     sliderdata = Product.objects.all()[:3]
     category = Category.objects.all()
+    dayproducts = Product.objects.all()[:6]
+    lastproducts = Product.objects.all().order_by('-id')[:3]
+    randomproducts = Product.objects.all().order_by('?')[:4]
 
     context = {'setting': setting,
                'category': category,
                'page': 'home',
-               'sliderdata':sliderdata}
+               'sliderdata':sliderdata,
+               'dayproducts': dayproducts,
+               'lastproducts': lastproducts,
+               'randomproducts': randomproducts
+               }
     return render(request, 'index.html', context)
 
 
@@ -54,9 +61,21 @@ def contact(request):
 def category_products(request,id,slug):
     category = Category.objects.all()
     categorydata = Category.objects.get(pk=id)
-    products = Product.objects.filter(category_id=id)
+    products = Product.objects.filter(category_id=id).order_by('-id')
     context = {'products': products,
                'category': category,
                'categorydata': categorydata
                }
     return render(request, 'products.html', context)
+
+def product_detail(request,id,slug):
+    category = Category.objects.all()
+    product = Product.objects.get(pk=id)
+    images = Images.objects.filter(product_id=id)
+    comments = Comment.objects.filter(product_id=id,status='True')
+    context = {'product': product,
+               'category': category,
+               'images': images,
+               'comments': comments,
+               }
+    return render(request,'product_detail.html',context)
