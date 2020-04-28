@@ -1,4 +1,5 @@
 {% load static %}
+
 <div id="body-bg">
     <ul class="social-icons pull-right hidden-xs">
         <li class="social-rss">
@@ -18,16 +19,57 @@
         <div class="container">
             <div class="row">
                 <!-- Logo -->
-                <div class="logo">
+                <div class="logo" style="width: 280px;margin-top: -7px">
                     <a href="/" title="">
-                        <img src="{% static "assets/img/logo.png" %}" alt="Logo" />
+                        <img src="{% static "assets/img/logo2.png" %}" alt="Logo"/>
                     </a>
                 </div>
                 <!-- End Logo -->
             </div>
+
         </div>
+        <form action="/search/" method="post" style="margin-top: -22px; margin-left: 890px; ">
+            {% csrf_token %}
+            <input id="query" name="query" class="input search-input" type="text" placeholder="  Enter your keyword" style="background: gainsboro;border-radius: 18px;" >
+
+            {% load mptt_tags %}
+
+            <select name="catid" class="input search-categories" style="margin-left: 1px;padding-bottom: 4px; padding-top: 4px;background: gainsboro;border-radius: 18px">
+                <option value="0">All Categories</option>
+                {% recursetree category %}
+                    {% if node.is_leaf_node %}
+                        <option value="{{ node.id }}">{{ node.title }}</option>
+                    {% endif %}
+                    {% if not node.is_leaf_node %}
+                        <optgroup label="{{ node.title }}">
+                            {{ children }}
+                        </optgroup>
+                    {% endif %}
+                {% endrecursetree %}
+            </select>
+            <button class="btn-primary" style="border-radius: 18px"><i class="fa fa-search"></i></button>
+        </form>
     </div>
     <!-- Top Menu -->
+
+    <script>
+
+        $(function() {
+            $("#query").autocomplete({
+                source: "/search_auto/",
+                select: function (event, ui) { //item selected
+                    AutoCompleteSelectHandler(event, ui)
+                },
+                minLength: 2,
+            });
+        });
+
+        function AutoCompleteSelectHandler(event, ui)
+        {
+            var selectedObj = ui.item;
+        }
+
+    </script>
 
     <div id="hornav" {% if not node.is_leaf_node %} class="container no-padding" {% endif %}>
         <div class="row">
@@ -38,7 +80,7 @@
                             <a href="/" class="fa-home"><b>Home</b></a>
                         </li>
                         <li>
-                            <span class="fa-gears">Categories</span>
+                            <span class="fa-bars">Categories</span>
                             <ul>
                                 {% load mptt_tags %}
                                 {% recursetree category %}
@@ -76,18 +118,35 @@
 
                         </li>
                         <li>
-                            <span class="fa-font">Blog</span>
-                            <ul>
-                                <li>
-                                    <a href="blog-list.html">Blog</a>
-                                </li>
-                                <li>
-                                    <a href="blog-single.html">Blog Single Item</a>
-                                </li>
-                            </ul>
+                            <a href="/contact" class="fa-comment">Contact</a>
                         </li>
                         <li>
-                            <a href="/contact" class="fa-comment">Contact</a>
+                            {% if user.id is not None %}
+                                <span class="fa-user">{{ user.first_name }}</span>
+                            {% else %}
+                                <span class="fa-user"><a href="/login/"><b>Login</b></a> / <a href="/signup/"><b>Sign Up</b></a></span>
+                            {% endif %}
+
+                        {% if user.id is not None %}
+                            <ul>
+                                <li>
+                                    <a href="#">My Account</a>
+                                </li>
+                                <li>
+                                    <a href="#">My Trips</a>
+                                </li>
+                                <li>
+                                    <a href="#">My Activities</a>
+                                </li>
+                                <li>
+                                    <a href="#">My Comments</a>
+                                </li>
+                                <li>
+                                    <a href="/logout/">Logout</a>
+                                </li>
+                            </ul>
+                        {% endif %}
+
                         </li>
                     </ul>
                 </div>
