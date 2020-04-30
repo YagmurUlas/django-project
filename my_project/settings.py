@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'user.apps.UserConfig',
     'product.apps.TripConfig',
     'home.apps.HomeConfig',
     'django.contrib.admin',
@@ -42,6 +43,8 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'django.contrib.staticfiles',
     'mptt',
+    'django_countries',
+    'phone_field',
 ]
 
 MIDDLEWARE = [

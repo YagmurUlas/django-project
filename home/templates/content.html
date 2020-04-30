@@ -58,7 +58,7 @@
                     <!-- Filter Buttons -->
                     <div class="portfolio-filter-container margin-top-20 text-center">
                         <ul class="portfolio-filter">
-                            <li class="portfolio-filter-label label label-primary">
+                            <li class="portfolio-filter-label label label-default" style="background-color: #8270a4">
                                 filter by:
                             </li>
                             <li>
@@ -91,7 +91,7 @@
                                 <a href="/product/{{ rs.id }}/{{ rs.slug }}">
                                     <figure>
                                         <img src=" {{ rs.image.url }}" style="height:160px" alt="image1">
-                                        <figcaption>
+                                        <figcaption style="background-color: darkslateblue">
                                             <h3 class="margin-top-20">{{ rs.title }}</h3>
                                             <span>{{ rs.title }}</span>
                                         </figcaption>
@@ -111,8 +111,8 @@
                                 <a href="/product/{{ rs.id }}/{{ rs.slug }}">
                                     <figure>
                                         <img src=" {{ rs.image.url }}" style="height:160px" alt="image1">
-                                        <figcaption>
-                                            <h3 class="margin-top-20">{{ rs.title }}</h3>
+                                        <figcaption style="background-color: darkslateblue">
+                                            <h3>{{ rs.title }}</h3>
                                             <span>{{ rs.title }}</span>
                                         </figcaption>
                                     </figure>
@@ -129,16 +129,3 @@
         </div>
     </div>
     <!-- === END CONTENT === -->
-    <div class="container background-white">
-        <div class="row padding-vert-40">
-            <div class="col-md-12">
-                <h2 class="animate fadeIn text-center">WE ARE CURRENTLY HIRING!</h2>
-                <p class="animate fadeIn text-center">If you like to work with a creative team in a lively and friendly enviroment then call us today!.</p>
-                <p class="animate fadeInUp text-center">
-                    <button class="btn btn-primary btn-lg" type="button">View Details</button>
-                </p>
-            </div>
-        </div>
-    </div>
-
-<!-- === END CONTENT === -->

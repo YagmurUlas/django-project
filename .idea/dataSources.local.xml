@@ -6,5 +6,16 @@
       <auth-required>false</auth-required>
       <schema-mapping />
     </data-source>
+    <data-source name="@localhost" uuid="a2225e13-67cb-43be-aba6-b0d014fe203d">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <schema-mapping />
+    </data-source>
+    <data-source name="db.sqlite3" uuid="01562a3c-f08c-40d0-98c7-7077f63bc0e9">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <auth-required>false</auth-required>
+      <schema-mapping />
+    </data-source>
   </component>
 </project>

@@ -1,0 +1,81 @@
+{% extends 'homebase.html' %}
+
+{% block title %} User Profile - {{ profile.user_name }} {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+
+{% block head %}
+    <link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
+{% endblock %}
+
+{% block content %}
+
+
+    <!-- === BEGIN CONTENT === -->
+    <div id="content">
+        <div class="container background-white">
+            <div class="row margin-vert-10">
+                <!-- Side Column -->
+                <div class="col-md-3">
+                    <!-- Recent Posts -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h1 class="panel-title">User Panel</h1>
+                        </div>
+                    </div>
+                    {% include "user_panel.html" %}
+                </div>
+                <!-- Main Column -->
+                <div class="col-md-9">
+                    <!-- Recent Posts -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h1 class="panel-title">User Information </h1>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <table>
+                                <tr>
+                                    <th class="text-right"></th>
+                                    <td class="thumb"><img src="{{ profile.image.url }}" style="width: 140px;height: 150px"></td>
+                                </tr>
+                                <tr> <th class="text-left"><br></th></tr>
+                                <tr>
+                                    <th class="text-left">Name Surname</th>
+                                    <th class="text-right">{{ profile.user_name}}</th>
+                                </tr>
+                                <tr> <th class="text-left"><br></th></tr>
+                                <tr>
+                                    <th class="text-left">Email</th>
+                                    <th class="text-right">{{ profile.user.email }}</th>
+                                </tr>
+                                <tr> <th class="text-left"><br></th></tr>
+                                <tr>
+                                    <th class="text-left">Phone<br></th>
+                                    <th class="text-right">{{ profile.phone }}</th>
+                                </tr>
+                                <tr> <th class="text-left"><br></th></tr>
+                                <tr>
+                                    <th class="text-left">Address</th>
+                                    <th class="text-right">{{ profile.address }}</th>
+                                </tr>
+                                <tr> <th class="text-left"><br></th></tr>
+                                <tr>
+                                    <th class="text-left">City / Country</th>
+                                    <th class="text-right">{{ profile.city }} / {{ profile.country }}</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Main Column -->
+            </div>
+        </div>
+    </div>
+    <!-- === END CONTENT === -->
+
+
+{% endblock %}
+

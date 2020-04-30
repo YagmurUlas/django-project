@@ -736,7 +736,7 @@ h1.logo-text a {
   float: none;
 }
 #hornav ul {
-  background-color: rgba(23, 23, 23, 0.3);
+  background-color: rgba(19, 3, 23, 0.82);
   border-radius: 0 0 5px 5px;
   display: inline-block;
   margin: 0;
@@ -1155,7 +1155,7 @@ h6 {
 }
 a {
   text-decoration: none;
-  color: #72968f;
+  color: rgba(31, 4, 39, 0.7);
   -webkit-transition: color 0.15s ease-in;
   -moz-transition: color 0.15s ease-in;
   -o-transition: color 0.15s ease-in;

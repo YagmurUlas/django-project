@@ -30,7 +30,7 @@
         </div>
         <form action="/search/" method="post" style="margin-top: -22px; margin-left: 890px; ">
             {% csrf_token %}
-            <input id="query" name="query" class="input search-input" type="text" placeholder="  Enter your keyword" style="background: gainsboro;border-radius: 18px;" >
+            <input id="query" name="query" class="input search-input" type="search" placeholder="  Enter your keyword" style="background: gainsboro;border-radius: 18px;" >
 
             {% load mptt_tags %}
 
@@ -47,7 +47,7 @@
                     {% endif %}
                 {% endrecursetree %}
             </select>
-            <button class="btn-primary" style="border-radius: 18px"><i class="fa fa-search"></i></button>
+            <button class="btn-outline-success" style="border-radius: 18px;background-color: #8270a4"><i class="fa fa-search"></i></button>
         </form>
     </div>
     <!-- Top Menu -->
@@ -75,7 +75,7 @@
         <div class="row">
             <div class="col-md-12 no-padding">
                 <div class="text-center visible-lg">
-                    <ul id="hornavmenu" {% if not node.is_leaf_node %} class="nav navbar-nav" {% endif %}>
+                    <ul id="hornavmenu" {% if not node.is_leaf_node %} class="nav navbar-nav" {% endif %} style="background-color: #222222">
                         <li>
                             <a href="/" class="fa-home"><b>Home</b></a>
                         </li>
@@ -124,7 +124,7 @@
                             {% if user.id is not None %}
                                 <span class="fa-user">{{ user.first_name }}</span>
                             {% else %}
-                                <span class="fa-user"><a href="/login/"><b>Login</b></a> / <a href="/signup/"><b>Sign Up</b></a></span>
+                                <span class="fa-user"><a href="/login/" style="color: #8270a4"><b>Login</b></a> / <a href="/signup/" style="color: #8270a4"><b>Sign Up</b></a></span>
                             {% endif %}
 
                         {% if user.id is not None %}
