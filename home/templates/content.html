@@ -6,38 +6,31 @@
             <!-- Main Text -->
             <div class="col-md-12">
 
-                <h2 class="text-center">Welcome to LifeStyle</h2>
-                <p class="text-center">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-                    lobortis nisl ut aliquip ex ea commodo consequat.</p>
-                <p class="text-center">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit
-                    augue duis dolore te feugait nulla facilisi. Cras non sem sem, at eleifend mi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Curabitur eget nisl
-                    a risus.</p>
+                <h2 class="text-center">Macera Dolu AcTravility</h2>
+                <p class="text-center">{{ setting.detail|safe }}</p>
+
+            <!--
                 <div id="carousel-example-2" class="carousel slide alternative" data-ride="carousel">
-                    <!-- Indicators -->
+
                     <ol class="carousel-indicators">
                         <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
                         <li data-target="#carousel-example-2" data-slide-to="1"></li>
                     </ol>
-                    <!-- Wrapper for slides -->
+
                     <div class="carousel-inner">
-                        <div class="item active">
+                        {% for rs in newimages %}
+                        <div class="item {% if forloop.counter == 1 %}active{% endif %}" id="slide{{ forloop.counter }}">
                             <div class="row">
-                                <div class="col-md-3"><img src=" {% static "/assets/img/portfolio/image1.jpg" %}" style="max-width:100%;"></div>
-                                <div class="col-md-3"><img src=" {% static "/assets/img/portfolio/image2.jpg" %}" style="max-width:100%;"></div>
-                                <div class="col-md-3"><img src=" {% static "/assets/img/portfolio/image3.jpg" %}" style="max-width:100%;"></div>
-                                <div class="col-md-3"><img src=" {% static "/assets/img/portfolio/image4.jpg" %}" style="max-width:100%;"></div>
+                                <div class="col-md-3"><img src=" {{ rs.image.url }}" style="max-width:100%;height: 140px"></div>
+                                <div class="col-md-3"><img src=" {{ rs.image.url }}" style="max-width:100%;"></div>
+                                <div class="col-md-3"><img src=" {{ rs.image.url }}" style="max-width:100%;"></div>
+                                <div class="col-md-3"><img src=" {{ rs.image.url }}" style="max-width:100%;"></div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-md-3"><img src=" {% static "/assets/img/portfolio/image5.jpg" %}" style="max-width:100%;"></div>
-                                <div class="col-md-3"><img src=" {% static "/assets/img/portfolio/image6.jpg" %}" style="max-width:100%;"></div>
-                                <div class="col-md-3"><img src=" {% static "/assets/img/portfolio/image7.jpg" %}" style="max-width:100%;"></div>
-                                <div class="col-md-3"><img src=" {% static "/assets/img/portfolio/image8.jpg" %}" style="max-width:100%;"></div>
-                            </div>
-                        </div>
+                    {% endfor %}
                     </div>
-                    <!-- Controls -->
+
+
                     <a class="left carousel-control" href="#carousel-example-2" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left"></span>
                     </a>
@@ -45,18 +38,18 @@
                         <span class="glyphicon glyphicon-chevron-right"></span>
                     </a>
                 </div>
+        -->
             </div>
-            <!-- End Main Text -->
         </div>
     </div>
 
     <div id="content">
         <div class="container background-white">
-            <div class="row margin-vert-30">
+            <div class="row margin-vert-30" style="margin-top: -30px">
                 <div class="col-md-12">
-                    <h2 class="animate fadeIn text-center">TRIPS AND ACTIVITIES</h2>
+                    <h2 class="animate fadeIn text-center" >TRIPS AND ACTIVITIES</h2>
                     <!-- Filter Buttons -->
-                    <div class="portfolio-filter-container margin-top-20 text-center">
+                    <div class="portfolio-filter-container margin-top-20 text-center ">
                         <ul class="portfolio-filter">
                             <li class="portfolio-filter-label label label-default" style="background-color: #8270a4">
                                 filter by:
@@ -86,14 +79,14 @@
                 <div class="col-md-12 portfolio-group no-padding">
                     {% for rs in dayproducts %}
                         <!-- Portfolio Item -->
-                        <div class="col-md-3 portfolio-item margin-bottom-40 trips" style="margin-left: 45px;">
+                        <div class="col-md-3 portfolio-item margin-bottom-40 trips" style="margin-left: 65px;">
                             <div>
                                 <a href="/product/{{ rs.id }}/{{ rs.slug }}">
                                     <figure>
-                                        <img src=" {{ rs.image.url }}" style="height:160px" alt="image1">
-                                        <figcaption style="background-color: darkslateblue">
+                                        <img src=" {{ rs.image.url }}" style="height:160px;width: 450px" alt="image1">
+                                        <figcaption style="background-color: darkslateblue ;padding-left: 10px">
                                             <h3 class="margin-top-20">{{ rs.title }}</h3>
-                                            <span>{{ rs.title }}</span>
+                                            <span>{{ rs.keywords }}</span>
                                         </figcaption>
                                     </figure>
                                 </a>
@@ -102,18 +95,18 @@
                         <!-- End Portfolio Item -->
                     {% endfor %}
                 </div>
-             <h2 class="animate fadeIn text-center">LAST TRIPS</h2><br>
-                    <div class="col-md-12 portfolio-group no-padding">
+                <h2 class="animate fadeIn text-center ">LAST TRIPS</h2><br>
+                <div class="col-md-12 portfolio-group no-padding">
                     {% for rs in lastproducts %}
                         <!-- Portfolio Item -->
-                        <div class="col-md-3 portfolio-item margin-bottom-40 activities" style="margin-left: 45px;">
+                        <div class="col-md-3 portfolio-item margin-bottom-40 activities" style="margin-left: 65px">
                             <div>
                                 <a href="/product/{{ rs.id }}/{{ rs.slug }}">
                                     <figure>
-                                        <img src=" {{ rs.image.url }}" style="height:160px" alt="image1">
-                                        <figcaption style="background-color: darkslateblue">
-                                            <h3>{{ rs.title }}</h3>
-                                            <span>{{ rs.title }}</span>
+                                        <img src=" {{ rs.image.url }}" style="height:160px;width: 450px" alt="image1">
+                                        <figcaption style="background-color: darkslateblue; padding-left: 10px">
+                                            <h3 class="margin-top-20">{{ rs.title }}</h3>
+                                            <span>{{ rs.keywords }}</span>
                                         </figcaption>
                                     </figure>
                                 </a>
@@ -124,8 +117,8 @@
                 </div>
 
 
-                </div>
             </div>
         </div>
     </div>
-    <!-- === END CONTENT === -->
+</div>
+<!-- === END CONTENT === -->

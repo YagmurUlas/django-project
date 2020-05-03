@@ -33,11 +33,10 @@
                             <div class="blog-item-header">
                                 <!-- Title -->
                                 <h2>
-                                    <a href="#">
+                                    <a href="/product/{{ rs.id }}/{{ rs.slug }}">
                                         {{ rs.title }}</a>
                                 </h2>
-                                <div class="clearfix"></div>
-                                <!-- End Title -->
+
                             </div>
                             <!-- End Blog Item Header -->
                             <!-- Blog Item Body -->
@@ -48,9 +47,9 @@
                                         <img class="margin-bottom-20" src="{{ rs.image.url }}" alt="thumb1">
                                     </div>
                                     <div class="col-md-7">
-                                        <p> {{ rs.description|safe }} </p>
+                                        {{ rs.description|safe }}
                                         <!-- Read More -->
-                                        <a href="/product/{{ rs.id }}/{{ rs.slug }}" class="btn btn-primary">
+                                        <a href="/product/{{ rs.id }}/{{ rs.slug }}" class="btn btn-violet">
                                             Read More
                                             <i class="icon-chevron-right readmore-icon"></i>
                                         </a>
@@ -64,32 +63,6 @@
 
                     {% endfor %}
 
-
-                    <!-- Pagination -->
-                    <ul class="pagination">
-                        <li>
-                            <a href="#">&laquo;</a>
-                        </li>
-                        <li class="active">
-                            <a href="#">1</a>
-                        </li>
-                        <li>
-                            <a href="#">2</a>
-                        </li>
-                        <li>
-                            <a href="#">3</a>
-                        </li>
-                        <li class="disabled">
-                            <a href="#">4</a>
-                        </li>
-                        <li>
-                            <a href="#">5</a>
-                        </li>
-                        <li>
-                            <a href="#">&raquo;</a>
-                        </li>
-                    </ul>
-                    <!-- End Pagination -->
                 </div>
                 <!-- End Main Column -->
                 <!-- End Recent Posts -->

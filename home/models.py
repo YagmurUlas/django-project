@@ -29,6 +29,7 @@ class Setting(models.Model):
     facebook = models.CharField(blank=True, max_length=50)
     instagram = models.CharField(blank=True, max_length=50)
     twitter = models.CharField(blank=True, max_length=50)
+    detail = RichTextUploadingField(blank=True)
     aboutus = RichTextUploadingField(blank=True)
     contact = RichTextUploadingField(blank=True)
     references = RichTextUploadingField(blank=True)
