@@ -3,16 +3,11 @@ from typing import List
 from django.contrib import admin
 from mptt.admin import MPTTModelAdmin, DraggableMPTTAdmin
 
-from product.models import Category, Activity, Product, Images, ImageActivity, Comment
+from product.models import Category, Product, Images, Comment
 
 
 class TripImageInline(admin.TabularInline):
     model = Images
-    extra = 5
-
-
-class ActivityImageInline(admin.TabularInline):
-    model = ImageActivity
     extra = 5
 
 
@@ -22,13 +17,6 @@ class CategoryAdmin(admin.ModelAdmin):
     readonly_fields = ('image_tag',)
     list_filter = ['status']
 
-
-class ActivityAdmin(admin.ModelAdmin):
-    # admin ekraninda status ve title i gosterir 07 tutorial
-    list_display = ['title', 'category', 'image_tag', 'status']
-    readonly_fields = ('image_tag',)
-    list_filter = ['status', 'category']
-    inlines = [ActivityImageInline]
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -41,10 +29,6 @@ class ProductAdmin(admin.ModelAdmin):
 
 class ImagesAdmin(admin.ModelAdmin):
     list_display = ['title', 'product', 'image']
-
-
-class ImageActivityAdmin(admin.ModelAdmin):
-    list_display = ['title', 'activity', 'image']
 
 
 class CategoryAdmin2(DraggableMPTTAdmin):
