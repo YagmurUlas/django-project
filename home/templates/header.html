@@ -79,6 +79,7 @@
                         <li>
                             <a href="/" class="fa-home"><b>Home</b></a>
                         </li>
+
                         <li>
                             <span class="fa-bars">Categories</span>
                             <ul>
@@ -95,21 +96,24 @@
                                         {% endif %}
                                     </li>
                                 {% endrecursetree %}
-
-
-                                <li class="parent">
-                                    <span>Typography</span>
-                                    <ul>
-                                        <li>
-                                            <a href="features-typo-basic.html">Basic Typography</a>
-                                        </li>
-                                        <li>
-                                            <a href="features-typo-blockquotes.html">Blockquotes</a>
-                                        </li>
-                                    </ul>
-                                </li>
                             </ul>
                         </li>
+
+                        <li>
+                                {% recursetree category %}
+                                    <li class="parent">
+                                        <a href="/content/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                        {% if not node.is_leaf_node %}
+                                            <ul>
+                                                <li>
+                                                    {{ children }}
+                                                </li>
+                                            </ul>
+                                        {% endif %}
+                                    </li>
+                                {% endrecursetree %}
+                        </li>
+
                         <li>
                             <a href="/about" class="fa-home">ABOUT</a>
                         </li>
@@ -127,25 +131,25 @@
                                 <span class="fa-user"><a href="/login/" style="color: #8270a4"><b>Login</b></a> / <a href="/signup/" style="color: #8270a4"><b>Sign Up</b></a></span>
                             {% endif %}
 
-                        {% if user.id is not None %}
-                            <ul>
-                                <li>
-                                    <a href="#">My Account</a>
-                                </li>
-                                <li>
-                                    <a href="#">My Trips</a>
-                                </li>
-                                <li>
-                                    <a href="#">My Activities</a>
-                                </li>
-                                <li>
-                                    <a href="#">My Comments</a>
-                                </li>
-                                <li>
-                                    <a href="/logout/">Logout</a>
-                                </li>
-                            </ul>
-                        {% endif %}
+                            {% if user.id is not None %}
+                                <ul>
+                                    <li>
+                                        <a href="#">My Account</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">My Trips</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">My Activities</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">My Comments</a>
+                                    </li>
+                                    <li>
+                                        <a href="/logout/">Logout</a>
+                                    </li>
+                                </ul>
+                            {% endif %}
 
                         </li>
                     </ul>
