@@ -37,8 +37,19 @@
                         <div class="panel-body">
                             <table>
                                 <tr>
-                                    <th class="text-right"></th>
-                                    <td class="thumb"><img src="{{ profile.image.url }}" style="width: 140px;height: 150px"></td>
+                                    <th>
+                                        <a href="/user/update" class="btn-violet" style="padding: 10px; border-radius: 10px;">Update Profile</a>
+                                        <a href="/user/password" class="btn-violet" style="padding: 10px;border-radius: 10px">Change Password</a>
+                                    </th>
+                                    {% if messages %}
+                                        {% for message in messages %}
+                                            <div style="color: #0dd44e; font-size: medium">
+                                                {{ message|safe }}
+                                            </div>
+                                        {% endfor %}
+                                    {% endif %}
+
+                                    <td class="thumb"><img src="{{ profile.image.url }}" style="width: 140px;height: 150px;margin-left: 80px"></td>
                                 </tr>
                                 <tr> <th class="text-left"><br></th></tr>
                                 <tr>
