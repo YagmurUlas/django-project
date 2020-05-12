@@ -2,16 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60280f68-52c7-4552-82b0-2076267d89b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/uploads/images/users/Berkay.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/users/Berkay_t3TYt9H.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/users/me_pp.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/change_password.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/user_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-1_thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-2_thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-3_thumb.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-4_thumb.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-5_thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-6_thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-7_thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-10_thumb.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-11.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-11_thumb.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-12_thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-13_thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-14_thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-8_thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-9.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-9_thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-15_thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-16_thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-17.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-17_thumb.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-18.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-18_thumb.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-19.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-19_thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-20.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-20_thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-21.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-21_thumb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/user_comments.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/user_travels.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/product_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_panel.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
@@ -223,7 +262,8 @@
       <workItem from="1588453094124" duration="2251000" />
       <workItem from="1588807004595" duration="873000" />
       <workItem from="1588878779725" duration="13368000" />
-      <workItem from="1589138408934" duration="9935000" />
+      <workItem from="1589138408934" duration="12526000" />
+      <workItem from="1589287058848" duration="4019000" />
     </task>
     <task id="LOCAL-00001" summary="header changed">
       <created>1585680473749</created>
@@ -330,7 +370,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588970231612</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="user update and pass change added">
+      <created>1589227641123</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1589227641123</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -350,7 +397,8 @@
     <MESSAGE value="user panel added" />
     <MESSAGE value="added type to category model" />
     <MESSAGE value="content_detail added" />
-    <option name="LAST_COMMIT_MESSAGE" value="content_detail added" />
+    <MESSAGE value="user update and pass change added" />
+    <option name="LAST_COMMIT_MESSAGE" value="user update and pass change added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="4" key="#Inspections" timestamp="1586438613864">
@@ -373,10 +421,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="389" y="201" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.689@0.0.1280.689" timestamp="1585669511002" />
-    <state x="420" y="0" key="CommitChangelistDialog2" timestamp="1588970230881">
+    <state x="420" y="0" key="CommitChangelistDialog2" timestamp="1589227640174">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="420" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1588970230881" />
+    <state x="420" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1589227640174" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1588167768235">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -385,46 +433,46 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="421" y="100" key="FileChooserDialogImpl/0.0.1280.689@0.0.1280.689" timestamp="1588167781703" />
-    <state width="469" height="207" key="GridCell.Tab.0.bottom" timestamp="1589140233067">
+    <state width="469" height="207" key="GridCell.Tab.0.bottom" timestamp="1589243999951">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="469" height="207" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1589140233067" />
-    <state width="469" height="207" key="GridCell.Tab.0.center" timestamp="1589140233067">
+    <state width="469" height="207" key="GridCell.Tab.0.bottom/0.0.1280.689@0.0.1280.689" timestamp="1589243999951" />
+    <state width="469" height="207" key="GridCell.Tab.0.center" timestamp="1589243999949">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="469" height="207" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1589140233067" />
-    <state width="469" height="207" key="GridCell.Tab.0.left" timestamp="1589140233067">
+    <state width="469" height="207" key="GridCell.Tab.0.center/0.0.1280.689@0.0.1280.689" timestamp="1589243999949" />
+    <state width="469" height="207" key="GridCell.Tab.0.left" timestamp="1589243999949">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="469" height="207" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1589140233067" />
-    <state width="469" height="207" key="GridCell.Tab.0.right" timestamp="1589140233067">
+    <state width="469" height="207" key="GridCell.Tab.0.left/0.0.1280.689@0.0.1280.689" timestamp="1589243999949" />
+    <state width="469" height="207" key="GridCell.Tab.0.right" timestamp="1589243999951">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="469" height="207" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1589140233067" />
-    <state width="469" height="207" key="GridCell.Tab.1.bottom" timestamp="1589140232939">
+    <state width="469" height="207" key="GridCell.Tab.0.right/0.0.1280.689@0.0.1280.689" timestamp="1589243999951" />
+    <state width="469" height="207" key="GridCell.Tab.1.bottom" timestamp="1589243999951">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="469" height="207" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1589140232939" />
-    <state width="469" height="207" key="GridCell.Tab.1.center" timestamp="1589140232937">
+    <state width="469" height="207" key="GridCell.Tab.1.bottom/0.0.1280.689@0.0.1280.689" timestamp="1589243999951" />
+    <state width="469" height="207" key="GridCell.Tab.1.center" timestamp="1589243999951">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="469" height="207" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1589140232937" />
-    <state width="469" height="207" key="GridCell.Tab.1.left" timestamp="1589140232937">
+    <state width="469" height="207" key="GridCell.Tab.1.center/0.0.1280.689@0.0.1280.689" timestamp="1589243999951" />
+    <state width="469" height="207" key="GridCell.Tab.1.left" timestamp="1589243999951">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="469" height="207" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1589140232937" />
-    <state width="469" height="207" key="GridCell.Tab.1.right" timestamp="1589140232939">
+    <state width="469" height="207" key="GridCell.Tab.1.left/0.0.1280.689@0.0.1280.689" timestamp="1589243999951" />
+    <state width="469" height="207" key="GridCell.Tab.1.right" timestamp="1589243999951">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state width="469" height="207" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1589140232939" />
+    <state width="469" height="207" key="GridCell.Tab.1.right/0.0.1280.689@0.0.1280.689" timestamp="1589243999951" />
     <state width="198" height="457" key="HiddenNamespacesPopup" timestamp="1588167791405">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="198" height="457" key="HiddenNamespacesPopup/0.0.1280.689@0.0.1280.689" timestamp="1588167791405" />
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1588970234157">
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1589227643852">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1588970234157" />
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1589227643852" />
     <state x="450" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586357846243">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
