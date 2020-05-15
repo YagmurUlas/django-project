@@ -2,57 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60280f68-52c7-4552-82b0-2076267d89b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-1_thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-2_thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-3.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-3_thumb.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-4.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-4_thumb.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-5_thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-6_thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155555-7_thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-10.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-10_thumb.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-11.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-11_thumb.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-12_thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-13_thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-14_thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-8_thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155556-9_thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-15_thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-16_thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-17.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-17_thumb.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-18.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-18_thumb.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-19_thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-20_thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/2020/05/12/image-20200512155631-21_thumb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/user_comments.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/user_travels.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/migrations/0001_initial.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/error_page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/migrations/0031_product_type.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/swim_sea_m5zO13k.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/swimming_xJthkbt.jpeg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/product_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_panel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_project/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/user_comments.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_comments.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,14 +93,15 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/user/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/templates" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Django\my_project\user\templates" />
-      <recent name="C:\Django\my_project\user" />
       <recent name="C:\Django\my_project\home\templates" />
+      <recent name="C:\Django\my_project\content" />
+      <recent name="C:\Django\my_project\user" />
+      <recent name="C:\Django\my_project\user\templates" />
       <recent name="C:\Django\my_project\trip" />
     </key>
   </component>
@@ -263,7 +236,9 @@
       <workItem from="1588807004595" duration="873000" />
       <workItem from="1588878779725" duration="13368000" />
       <workItem from="1589138408934" duration="12526000" />
-      <workItem from="1589287058848" duration="4019000" />
+      <workItem from="1589287058848" duration="9076000" />
+      <workItem from="1589402975548" duration="2000" />
+      <workItem from="1589487224672" duration="8562000" />
     </task>
     <task id="LOCAL-00001" summary="header changed">
       <created>1585680473749</created>
@@ -377,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589227641123</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="listing user comments">
+      <created>1589291154264</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1589291154264</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,13 +380,14 @@
     <MESSAGE value="added type to category model" />
     <MESSAGE value="content_detail added" />
     <MESSAGE value="user update and pass change added" />
-    <option name="LAST_COMMIT_MESSAGE" value="user update and pass change added" />
+    <MESSAGE value="listing user comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="listing user comments" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="233" y="4" key="#Inspections" timestamp="1586438613864">
+    <state x="233" y="4" key="#Inspections" timestamp="1589487866374">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="233" y="4" key="#Inspections/0.0.1280.689@0.0.1280.689" timestamp="1586438613864" />
+    <state x="233" y="4" key="#Inspections/0.0.1280.689@0.0.1280.689" timestamp="1589487866374" />
     <state x="191" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1588167787657">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -421,10 +404,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="389" y="201" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.689@0.0.1280.689" timestamp="1585669511002" />
-    <state x="420" y="0" key="CommitChangelistDialog2" timestamp="1589227640174">
+    <state x="420" y="0" key="CommitChangelistDialog2" timestamp="1589291153430">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="420" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1589227640174" />
+    <state x="420" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1589291153430" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1588167768235">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -469,10 +452,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="198" height="457" key="HiddenNamespacesPopup/0.0.1280.689@0.0.1280.689" timestamp="1588167791405" />
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1589227643852">
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1589291155840">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1589227643852" />
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1589291155840" />
     <state x="450" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586357846243">
       <screen x="0" y="0" width="1280" height="689" />
     </state>

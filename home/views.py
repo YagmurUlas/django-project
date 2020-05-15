@@ -19,6 +19,7 @@ def index(request):
     dayproducts = Product.objects.all().order_by('?')[:6]
     lastproducts = Product.objects.all().order_by('-id')[:3]
     randomproducts = Product.objects.all().order_by('?')[:4]
+    activities = Product.objects.filter(type='Activity').order_by('-id')[:4]
 
     context = {'setting': setting,
                'category': category,
@@ -27,7 +28,8 @@ def index(request):
                'dayproducts': dayproducts,
                'lastproducts': lastproducts,
                'randomproducts': randomproducts,
-               'newimages': newimages
+               'newimages': newimages,
+               'activities': activities,
                }
     return render(request, 'index.html', context)
 
@@ -41,8 +43,11 @@ def about(request):
 
 
 def references(request):
+    category = Category.objects.all()
     setting = Setting.objects.get(pk=1)
-    context = {'setting': setting}
+    context = {
+        'category':category,
+        'setting': setting}
     return render(request, 'references.html', context)
 
 
@@ -92,9 +97,14 @@ def product_detail(request,id,slug):
 
 def content_detail(request,id,slug):
     category = Category.objects.all()
-    product = Product.objects.filter(category_id=id)
-    link = '/product/'+str(product[0].id)+'/'+product[0].slug
-    return HttpResponseRedirect(link)
+    try:
+        product = Product.objects.filter(category_id=id)
+        link = '/product/'+str(product[0].id)+'/'+product[0].slug
+        return HttpResponseRedirect(link)
+    except:
+        messages.warning(request,"Hata İlgili sayfa bulunamadı")
+        link = '/error'
+        return HttpResponseRedirect(link)
 
 def product_search(request):
     if request.method == 'POST': #CHECK FORM POST
@@ -170,4 +180,9 @@ def signup_view(request):
     return render(request, 'signup.html', context)
 
 
-
+def error(request):
+    category = Category.objects.all()
+    context = {
+        'category': category,
+    }
+    return render(request, 'error_page.html', context)

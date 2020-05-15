@@ -40,30 +40,37 @@
                                     </div>
                                 {% endfor %}
                             {% endif %}
-                            <table class="text-center">
-                                <tr>
-                                    <th class="text-center">Product</th>
-                                    <th class="text-center">Subject</th>
-                                    <th class="text-center">Comment</th>
-                                    <th>Status</th>
-                                    <th class="text-center">Date</th>
-                                </tr>
-                                {% for rs in comments %}
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover">
+                                    <thead>
                                     <tr>
-                                        <td style="padding-right: 10px">
-                                            <a href="/product/{{ rs.product_id }}/{{ rs.product.slug }}">
-                                                <b>{{ rs.product.title }} </b></a>
-                                        </td>
-                                        <td class="text-center">{{ rs.subject }}</td>
-                                        <td>{{ rs.comment }}</td>
-                                        <td style="padding-right: 35px">{{ rs.status }}</td>
-                                        <td>{{ rs.create_at }}</td>
-                                        <td>
-                                            <a class="btn-violet" style="padding: 10px;border-radius: 10px" href="/user/deletecomment/{{ rs.id }}" onclick="return confirm('Comment will be delete are your sure?')">Delete</a>
-                                        </td>
+                                        <th>Product</th>
+                                        <th>Subject</th>
+                                        <th>Comment</th>
+                                        <th>Status</th>
+                                        <th>Date</th>
+                                        <th></th>
                                     </tr>
-                                {% endfor %}
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                    {% for rs in comments %}
+                                        <tr>
+                                            <td>
+                                                <a href="/product/{{ rs.product_id }}/{{ rs.product.slug }}">
+                                                    <b>{{ rs.product.title }} </b></a>
+                                            </td>
+                                            <td>{{ rs.subject }}</td>
+                                            <td>{{ rs.comment }}</td>
+                                            <td>{{ rs.status }}</td>
+                                            <td>{{ rs.create_at }}</td>
+                                            <td>
+                                                <a class="btn-violet" style="padding: 5px;border-radius: 10px" href="/user/deletecomment/{{ rs.id }}" onclick="return confirm('Comment will be delete are your sure?')">Delete</a>
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>

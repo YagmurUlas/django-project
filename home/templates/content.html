@@ -9,7 +9,7 @@
                 <h2 class="text-center">Macera Dolu AcTravility</h2>
                 <p class="text-center">{{ setting.detail|safe }}</p>
 
-            <!--
+                <!--
                 <div id="carousel-example-2" class="carousel slide alternative" data-ride="carousel">
 
                     <ol class="carousel-indicators">
@@ -115,7 +115,26 @@
                         <!-- End Portfolio Item -->
                     {% endfor %}
                 </div>
-
+                <h2 class="animate fadeIn text-center ">LAST ACTIVIES</h2><br>
+                <div class="col-md-12 portfolio-group no-padding">
+                    {% for rs in activies %}
+                        <!-- Portfolio Item -->
+                        <div class="col-md-3 portfolio-item margin-bottom-40 activities" style="margin-left: 65px">
+                            <div>
+                                <a href="/product/{{ rs.id }}/{{ rs.slug }}">
+                                    <figure>
+                                        <img src=" {{ rs.image.url }}" style="height:160px;width: 450px" alt="image1">
+                                        <figcaption style="background-color: darkslateblue; padding-left: 10px">
+                                            <h3 class="margin-top-20">{{ rs.title }}</h3>
+                                            <span>{{ rs.keywords }}</span>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- End Portfolio Item -->
+                    {% endfor %}
+                </div>
 
             </div>
         </div>

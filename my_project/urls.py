@@ -25,10 +25,12 @@ urlpatterns = [
     path('home/', include('home.urls')),
     path('product/', include('product.urls')),
     path('user/', include('user.urls')),
+    path('content/', include('content.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
     path('admin/', admin.site.urls),
 
     path('about/', views.about, name='about'),
+    path('error/', views.error, name='error'),
     path('references/', views.references, name='references'),
     path('contact/', views.contact, name='contact'),
     path('category/<int:id>/<slug:slug>/',views.category_products, name='category_products'),

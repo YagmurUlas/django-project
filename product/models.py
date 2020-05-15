@@ -54,7 +54,12 @@ class Product(models.Model):
         ('True', 'Yes'),
         ('False', 'No'),
     )
+    TYPE = (
+        ('Category','Category'),
+        ('Activity','Activity'),
+    )
     category = models.ForeignKey(Category, on_delete=models.CASCADE)  # relation with Category table
+    type = models.CharField(max_length=10, choices=TYPE, default="Category")
     title = models.CharField(max_length=50)
     keywords = models.CharField(max_length=255)
     description = RichTextUploadingField()

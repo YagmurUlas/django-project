@@ -136,8 +136,8 @@
 
                                                             {% if messages %}
                                                                 {% for message in messages %}
-                                                                    <div class="panel panel-red invert {{ message.tags }}" role="alert">
-                                                                        {{ message }}
+                                                                    <div class="panel panel-aqua {{ message.tags }}" role="alert">
+                                                                         &nbsp;{{ message }}
                                                                     </div>
                                                                 {% endfor %}
                                                             {% endif %}
@@ -152,7 +152,7 @@
                                                                     <textarea class="input" name="comment" id="id_comment" placeholder="Your review" rows="6" cols="50"></textarea>
                                                                 </div>
                                                                 {% if user.id is not None %}
-                                                                    <p><button class="btn btn-primary" type="submit">Send Message</button></p>
+                                                                    <p><button class="btn btn-violet" type="submit">Send Message</button></p>
                                                                 {% else %}
                                                                     Yorum eklemek için <a href="/login">Login</a> olunuz!
                                                                 {% endif %}
