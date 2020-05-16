@@ -58,7 +58,7 @@
                                 <a href="#" class="portfolio-selected btn btn-default" data-filter="*">All</a>
                             </li>
                             <li>
-                                <a href="#" class="btn btn-default" data-filter=".trips">Trips</a>
+                                <a href="#" class="btn btn-default" data-filter=".travels">Trips</a>
                             </li>
                             <li>
                                 <a href="#" class="btn btn-default" data-filter=".activities">Activities</a>
@@ -97,9 +97,9 @@
                 </div>
                 <h2 class="animate fadeIn text-center ">LAST TRIPS</h2><br>
                 <div class="col-md-12 portfolio-group no-padding">
-                    {% for rs in lastproducts %}
+                    {% for rs in travels %}
                         <!-- Portfolio Item -->
-                        <div class="col-md-3 portfolio-item margin-bottom-40 activities" style="margin-left: 65px">
+                        <div class="col-md-3 portfolio-item margin-bottom-40 travels" style="margin-left: 65px">
                             <div>
                                 <a href="/product/{{ rs.id }}/{{ rs.slug }}">
                                     <figure>
@@ -117,7 +117,7 @@
                 </div>
                 <h2 class="animate fadeIn text-center ">LAST ACTIVIES</h2><br>
                 <div class="col-md-12 portfolio-group no-padding">
-                    {% for rs in activies %}
+                    {% for rs in activities %}
                         <!-- Portfolio Item -->
                         <div class="col-md-3 portfolio-item margin-bottom-40 activities" style="margin-left: 65px">
                             <div>

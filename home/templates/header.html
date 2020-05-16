@@ -100,18 +100,21 @@
                         </li>
 
                         <li>
-                            {% recursetree category %}
-                                <li class="parent">
-                                    <a href="/content/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
-                                    {% if not node.is_leaf_node %}
-                                        <ul>
-                                            <li>
-                                                {{ children }}
-                                            </li>
-                                        </ul>
-                                    {% endif %}
-                                </li>
-                            {% endrecursetree %}
+                            {% if menu %}
+                                {% recursetree menu %}
+                                    <li class="parent">
+                                        <a href="/menu/{{ node.id }}">{{ node.title }}</a>
+                                        {% if not node.is_leaf_node %}
+                                            <ul>
+                                                <li>
+                                                    {{ children }}
+                                                </li>
+                                            </ul>
+                                        {% endif %}
+                                    </li>
+                                {% endrecursetree %}
+                            {% endif %}
+
                         </li>
 
                         <li>

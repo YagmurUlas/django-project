@@ -32,17 +32,20 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('error/', views.error, name='error'),
     path('references/', views.references, name='references'),
+
     path('contact/', views.contact, name='contact'),
     path('category/<int:id>/<slug:slug>/',views.category_products, name='category_products'),
     path('product/<int:id>/<slug:slug>/',views.product_detail, name='product_detail'),
+    path('menu/<int:id>/',views.menu, name='menu'),
+
     path('content/<int:id>/<slug:slug>/',views.content_detail, name='content_detail'),
+
     path('search/', views.product_search, name='product_search'),
     path('search_auto/', views.product_search_auto, name='product_search_auto'),
     path('logout/', views.logout_view, name='logout_view'),
     path('login/', views.login_view, name='login_view'),
     path('signup/', views.signup_view, name='signup_view'),
 ]
-
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

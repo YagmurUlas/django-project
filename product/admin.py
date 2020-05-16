@@ -3,7 +3,7 @@ from typing import List
 from django.contrib import admin
 from mptt.admin import MPTTModelAdmin, DraggableMPTTAdmin
 
-from product.models import Category, Product, Images, Comment
+from product.models import Category, Product, Images, Comment, Menu
 
 
 class TripImageInline(admin.TabularInline):
@@ -22,7 +22,7 @@ class CategoryAdmin(admin.ModelAdmin):
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['title', 'category', 'image_tag', 'status']
     readonly_fields = ('image_tag',)
-    list_filter = ['status', 'category']
+    list_filter = ['status', 'category','type']
     inlines = [TripImageInline]
     prepopulated_fields = {'slug': ('title',)}
 
@@ -69,9 +69,13 @@ class CommentAdmin(admin.ModelAdmin):
     list_display = ['subject', 'comment', 'product','user', 'status']
     list_filter = ['status']
 
-
+class MenuAdmin(DraggableMPTTAdmin):
+    mptt_indent_field = "title"
+    list_display = ('tree_actions', 'indented_title','status')
+    list_filter = ['status']
 
 admin.site.register(Category, CategoryAdmin2)
 admin.site.register(Product, ProductAdmin)
+admin.site.register(Menu, MenuAdmin)
 admin.site.register(Images, ImagesAdmin)
 admin.site.register(Comment, CommentAdmin)

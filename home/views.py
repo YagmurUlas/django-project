@@ -8,21 +8,24 @@ from django.shortcuts import render
 # Create your views here.
 from home.forms import SearchForm, SignUpForm
 from home.models import Setting, ContactFormMessage, ContactForm
-from product.models import Product, Category, Images, Comment
+from product.models import Product, Category, Images, Comment, Menu
 
 
 def index(request):
     setting = Setting.objects.get(pk=1)
     sliderdata = Product.objects.all()[:3]
     category = Category.objects.all()
+    menu = Menu.objects.all()
     newimages = Product.objects.all().order_by('?')[:6]
     dayproducts = Product.objects.all().order_by('?')[:6]
     lastproducts = Product.objects.all().order_by('-id')[:3]
-    randomproducts = Product.objects.all().order_by('?')[:4]
-    activities = Product.objects.filter(type='Activity').order_by('-id')[:4]
+    randomproducts = Product.objects.all().order_by('?')[:3]
+    activities = Product.objects.filter(type='Activity').order_by('-id')[:3]
+    travels = Product.objects.filter(type='Travel').order_by('-id')[:3]
 
     context = {'setting': setting,
                'category': category,
+               'menu' : menu,
                'page': 'home',
                'sliderdata':sliderdata,
                'dayproducts': dayproducts,
@@ -30,6 +33,7 @@ def index(request):
                'randomproducts': randomproducts,
                'newimages': newimages,
                'activities': activities,
+               'travels': travels,
                }
     return render(request, 'index.html', context)
 
@@ -65,35 +69,61 @@ def contact(request):
             messages.success(request,"Mesajınız başarı ile iletilmiştir.Teşekkür ederiz.")
             return HttpResponseRedirect('/contact')
 
+    menu = Menu.objects.all()
     category = Category.objects.all()
     setting = Setting.objects.get(pk=1)
     form = ContactForm()
     context = {'setting': setting,
+               'menu': menu,
                'form': form,
                'category': category,}
     return render(request, 'contact.html', context)
 
 def category_products(request,id,slug):
     category = Category.objects.all()
+    menu = Menu.objects.all()
     categorydata = Category.objects.get(pk=id)
     products = Product.objects.filter(category_id=id).order_by('-id')
     context = {'products': products,
+               'menu':menu,
                'category': category,
                'categorydata': categorydata
                }
     return render(request, 'products.html', context)
 
+def menu(request,id):
+    category = Category.objects.all()
+    menu = Menu.objects.all()
+    try:
+        products = Product.objects.filter(menu_id=id).order_by('-id')
+        context = {'products': products,
+                   'menu':menu,
+                   'category':category,
+                   }
+        return render(request, 'products.html', context)
+    except:
+        messages.warning(request,"Hata! İlgili içerik bulunamadı.")
+        link ='/error'
+        return HttpResponseRedirect(link)
+
 def product_detail(request,id,slug):
     category = Category.objects.all()
-    product = Product.objects.get(pk=id)
-    images = Images.objects.filter(product_id=id)
-    comments = Comment.objects.filter(product_id=id,status='True')
-    context = {'product': product,
-               'category': category,
-               'images': images,
-               'comments': comments,
-               }
-    return render(request,'product_detail.html',context)
+    menu = Menu.objects.all()
+    try:
+        product = Product.objects.get(pk=id)
+        images = Images.objects.filter(product_id=id)
+        comments = Comment.objects.filter(product_id=id,status='True')
+        context = {'product': product,
+                   'menu': menu,
+                   'category': category,
+                   'images': images,
+                   'comments': comments,
+                   }
+        return render(request,'product_detail.html',context)
+    except:
+        messages.warning(request,"Hata! İlgili içerik bulunamadı.")
+        link ='/error'
+        return HttpResponseRedirect(link)
 
 def content_detail(request,id,slug):
     category = Category.objects.all()
@@ -181,8 +211,10 @@ def signup_view(request):
 
 
 def error(request):
+    menu = Menu.objects.all()
     category = Category.objects.all()
     context = {
         'category': category,
+        'menu':menu,
     }
     return render(request, 'error_page.html', context)

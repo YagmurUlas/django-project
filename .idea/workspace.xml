@@ -2,29 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60280f68-52c7-4552-82b0-2076267d89b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/content/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/templates/error_page.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/product/migrations/0031_product_type.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/swim_sea_m5zO13k.jfif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/swimming_xJthkbt.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/migrations/0032_auto_20200515_2256.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/migrations/0033_auto_20200516_1514.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Avrupa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Avrupa1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Avrupa_hZB4FUf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Bordeaux.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Bordeaux_DUk7fou.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Hotel-De-Ville-Bordeaux.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Hotel-De-Ville-Bordeaux_diYqXKu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Le-Grand-Theatre-Bordeaux.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Le-Grand-Theatre-Bordeaux_jD7m5LP.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Paris-Gezi-Rehberi.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Saint-Andre-Katedrali-Bordeaux.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/Saint-Andre-Katedrali-Bordeaux_rksowy8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/bodrum_ok1kImo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/finike-andrea-doria-koyu-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/finike-elmali-muzesi-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/finike_LjhFWeq.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/limyra-antik-kenti5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/paris-18905.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/paris.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/yamac-parasutu-malzemeleri.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/yamac-parasutu-malzemeleri_N4BAKsE.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/yamac-parasutu-nasil-yapilir.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/yamac-parasutu-nedir.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/yamac-parasutu-nedir_Lf8wafy.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/yamac-parasutu-rotalari.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/product_detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_project/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_comments.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_comments.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +250,10 @@
       <workItem from="1589138408934" duration="12526000" />
       <workItem from="1589287058848" duration="9076000" />
       <workItem from="1589402975548" duration="2000" />
-      <workItem from="1589487224672" duration="8562000" />
+      <workItem from="1589487224672" duration="14914000" />
+      <workItem from="1589621334810" duration="2855000" />
+      <workItem from="1589631002186" duration="70000" />
+      <workItem from="1589631094849" duration="7702000" />
     </task>
     <task id="LOCAL-00001" summary="header changed">
       <created>1585680473749</created>
@@ -359,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589291154264</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="error page added">
+      <created>1589555558419</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1589555558419</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,7 +403,8 @@
     <MESSAGE value="content_detail added" />
     <MESSAGE value="user update and pass change added" />
     <MESSAGE value="listing user comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="listing user comments" />
+    <MESSAGE value="error page added" />
+    <option name="LAST_COMMIT_MESSAGE" value="error page added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="4" key="#Inspections" timestamp="1589487866374">
@@ -404,10 +427,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="389" y="201" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.689@0.0.1280.689" timestamp="1585669511002" />
-    <state x="420" y="0" key="CommitChangelistDialog2" timestamp="1589291153430">
+    <state x="420" y="0" key="CommitChangelistDialog2" timestamp="1589555557332">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="420" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1589291153430" />
+    <state x="420" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1589555557332" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1588167768235">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -452,10 +475,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="198" height="457" key="HiddenNamespacesPopup/0.0.1280.689@0.0.1280.689" timestamp="1588167791405" />
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1589291155840">
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1589555561045">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1589291155840" />
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1589555561045" />
     <state x="450" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586357846243">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
