@@ -18,7 +18,6 @@ def index(request):
     menu = Menu.objects.all()
     newimages = Product.objects.all().order_by('?')[:6]
     dayproducts = Product.objects.all().order_by('?')[:6]
-    lastproducts = Product.objects.all().order_by('-id')[:3]
     randomproducts = Product.objects.all().order_by('?')[:3]
     activities = Product.objects.filter(type='Activity').order_by('-id')[:3]
     travels = Product.objects.filter(type='Travel').order_by('-id')[:3]
@@ -29,7 +28,6 @@ def index(request):
                'page': 'home',
                'sliderdata':sliderdata,
                'dayproducts': dayproducts,
-               'lastproducts': lastproducts,
                'randomproducts': randomproducts,
                'newimages': newimages,
                'activities': activities,
@@ -40,23 +38,27 @@ def index(request):
 
 def about(request):
     category = Category.objects.all()
+    menu = Menu.objects.all()
     setting = Setting.objects.get(pk=1)
     context = {'setting': setting,
-               'category' : category}
+               'category' : category,
+               'menu': menu,
+               }
     return render(request, 'about.html', context)
 
 
 def references(request):
     category = Category.objects.all()
+    menu = Menu.objects.all()
     setting = Setting.objects.get(pk=1)
     context = {
         'category':category,
+        'menu': menu,
         'setting': setting}
     return render(request, 'references.html', context)
 
 
 def contact(request):
-
     if request.method == 'POST': #form post edilirse
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -84,25 +86,29 @@ def category_products(request,id,slug):
     menu = Menu.objects.all()
     categorydata = Category.objects.get(pk=id)
     products = Product.objects.filter(category_id=id).order_by('-id')
-    context = {'products': products,
-               'menu':menu,
-               'category': category,
-               'categorydata': categorydata
-               }
-    return render(request, 'products.html', context)
+    if products:
+        context = {'products': products,
+                   'menu':menu,
+                   'category': category,
+                   'categorydata': categorydata
+                   }
+        return render(request, 'products.html', context)
+    else:
+        messages.warning(request, "Hata! İlgili içerik bulunamadı.")
+        link = '/error'
+        return HttpResponseRedirect(link)
 
 def menu(request,id):
     category = Category.objects.all()
     menu = Menu.objects.all()
-    try:
-        products = Product.objects.filter(menu_id=id).order_by('-id')
+    products = Product.objects.filter(menu_id=id).order_by('-id')
+    if products:
         context = {'products': products,
                    'menu':menu,
                    'category':category,
                    }
         return render(request, 'products.html', context)
-    except:
-        messages.warning(request,"Hata! İlgili içerik bulunamadı.")
+    else:
         link ='/error'
         return HttpResponseRedirect(link)
 
@@ -121,7 +127,6 @@ def product_detail(request,id,slug):
                    }
         return render(request,'product_detail.html',context)
     except:
-        messages.warning(request,"Hata! İlgili içerik bulunamadı.")
         link ='/error'
         return HttpResponseRedirect(link)
 
@@ -132,7 +137,6 @@ def content_detail(request,id,slug):
         link = '/product/'+str(product[0].id)+'/'+product[0].slug
         return HttpResponseRedirect(link)
     except:
-        messages.warning(request,"Hata İlgili sayfa bulunamadı")
         link = '/error'
         return HttpResponseRedirect(link)
 
@@ -188,7 +192,9 @@ def login_view(request):
             return HttpResponseRedirect('/login')
 
     category = Category.objects.all()
+    menu = Menu.objects.all()
     context = {'category': category,
+               'menu':menu,
                }
     return render(request, 'login.html', context)
 
@@ -204,8 +210,10 @@ def signup_view(request):
 
     form = SignUpForm()
     category = Category.objects.all()
+    menu = Menu.objects.all()
     context = {'category': category,
                'form': form,
+               'menu':menu,
                }
     return render(request, 'signup.html', context)
 

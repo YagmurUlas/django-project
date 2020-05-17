@@ -74,16 +74,17 @@ class Product(models.Model):
         ('Travel', 'Travel'),
         ('Activity', 'Activity'),
         ('Menu', 'Menu'),
+
     )
     category = models.ForeignKey(Category, on_delete=models.CASCADE)  # relation with Category table
-    menu = models.OneToOneField(Menu, null=True, blank=True, on_delete=models.CASCADE)
+    menu = models.ForeignKey(Menu, on_delete=models.CASCADE)
     type = models.CharField(max_length=10, choices=TYPE, default="Category")
     title = models.CharField(max_length=50)
     keywords = models.CharField(max_length=255)
     description = RichTextUploadingField()
     slug = models.SlugField(null=False, unique=True)
     image = models.ImageField(blank=True, upload_to='images/')
-    price = models.FloatField(blank=True)
+    price = models.FloatField(null=True)
     person_number = models.IntegerField(blank=True, null=True)
     day_number = models.IntegerField(blank=True, null=True)
     shortDetail = RichTextUploadingField(max_length=1400)

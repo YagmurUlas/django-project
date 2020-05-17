@@ -8,17 +8,19 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 from home.models import UserProfile
-from product.models import Category, Comment
+from product.models import Category, Comment, Menu
 from user.forms import UserUpdateForm, ProfileUpdateForm
 
 
 def index(request):
     category = Category.objects.all()
+    menu = Menu.objects.all()
     current_user = request.user #access user session
 
     profile = UserProfile.objects.get(user_id=current_user.id)
     context = {'category': category,
                'profile': profile,
+               'menu':menu,
                }
     return render(request,'user_profile.html',context)
 
@@ -34,10 +36,12 @@ def user_update(request):
 
     else:
         category = Category.objects.all()
+        menu = Menu.objects.all()
         user_form = UserUpdateForm(instance=request.user)
         profile_form = ProfileUpdateForm(instance=request.user.userprofile)
         context = {
             'category': category,
+            'menu':menu,
             'user_form': user_form,
             'profile_form': profile_form
         }
@@ -64,10 +68,12 @@ def change_password(request):
 @login_required(login_url='/login') #check login
 def comments(request):
     category = Category.objects.all()
+    menu = Menu.objects.all()
     current_user = request.user  # access user session
     comments = Comment.objects.filter(user_id=current_user.id).order_by('-id')
     context = {'category': category,
                'comments': comments,
+               'menu':menu,
                }
     return render(request, 'user_comments.html', context)
 
