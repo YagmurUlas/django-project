@@ -94,7 +94,6 @@ def category_products(request,id,slug):
                    }
         return render(request, 'products.html', context)
     else:
-        messages.warning(request, "Hata! İlgili içerik bulunamadı.")
         link = '/error'
         return HttpResponseRedirect(link)
 

@@ -1,0 +1,94 @@
+{% extends 'homebase.html' %}
+
+{% block title %} User Contents {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+{% block head %}
+    <link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
+{% endblock %}
+{% block content %}
+
+
+    <!-- === BEGIN CONTENT === -->
+    <div id="content">
+        <div class="container background-white">
+            <div class="row margin-vert-10">
+                <!-- Side Column -->
+                <div class="col-md-2">
+                    <!-- Recent Posts -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h1 class="panel-title">User Panel</h1>
+                        </div>
+                    </div>
+                    {% include "user_panel.html" %}
+                </div>
+                <!-- Main Column -->
+                <div class="col-md-10">
+                    <!-- Recent Posts -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h1 class="panel-title">User Contents  <a class="btn-warning" href="/user/addcontent" style="padding:4px;border-radius: 10px; padding-right: 24px;padding-left: 20px;margin-left: 520px">Add Content</a></h1>
+
+
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            {% if messages %}
+                                {% for message in messages %}
+                                    <div style="color: #0dd44e; font-size: medium">
+                                        {{ message|safe }}<br><br>
+                                    </div>
+                                {% endfor %}
+                            {% endif %}
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Title</th>
+                                        <th>Type</th>
+                                        <th>Menu</th>
+                                        <th>Status</th>
+                                        <th>Date</th>
+                                        <th>Detail</th>
+                                        <th></th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {% for rs in contents %}
+                                        <tr>
+                                            <td><a href="/product/{{ rs.id }}/{{ rs.slug }}"><img src="{{ rs.image.url }}" style="width: 140px;height: 150px"></a></td>
+                                            <td>
+                                                <a href="/product/{{ rs.id }}/{{ rs.slug }}">
+                                                    <b>{{ rs.title }} </b></a>
+                                            </td>
+                                            <td>{{ rs.type }}</td>
+                                            <td>{{ rs.menu }}</td>
+                                            <td>{{ rs.status }}</td>
+                                            <td>{{ rs.create_at }}</td>
+                                            <td>
+                                                <a class="btn-violet" href="/user/contentedit/{{ rs.id }}" style="padding: 5px;border-radius: 10px; padding-right: 20px">Edit</a>
+                                            </td>
+                                            <td>
+                                                <a class="btn-violet" style="padding: 5px;border-radius: 10px" href="/user/contentdelete/{{ rs.id }}" onclick="return confirm('Comment will be delete are your sure?')">Delete</a>
+                                            </td>
+
+                                        </tr>
+                                    {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Main Column -->
+            </div>
+        </div>
+    </div>
+    <!-- === END CONTENT === -->
+
+
+{% endblock %}
+

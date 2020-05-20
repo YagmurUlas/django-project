@@ -8,7 +8,7 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 from home.models import UserProfile
-from product.models import Category, Comment, Menu
+from product.models import Category, Comment, Menu, Product, ContentForm
 from user.forms import UserUpdateForm, ProfileUpdateForm
 
 
@@ -62,7 +62,7 @@ def change_password(request):
         category = Category.objects.all()
         form = PasswordChangeForm(request.user)
         return render(request, 'change_password.html', {
-        'form': form, 'category': category
+            'form': form, 'category': category
         })
 
 @login_required(login_url='/login') #check login
@@ -83,3 +83,48 @@ def deletecomment(request,id):
     Comment.objects.filter(id=id, user_id=current_user.id).delete()
     messages.success(request, 'Comment Deleted :)')
     return HttpResponseRedirect('/user/comments')
+
+@login_required(login_url='/login') #check login
+def contents(request):
+    category = Category.objects.all()
+    menu = Menu.objects.all()
+    current_user = request.user  # access user session
+    contents = Product.objects.filter(user_id=current_user.id).order_by('-id')
+    context = {'category': category,
+               'menu':menu,
+               'contents': contents,
+               }
+    return render(request, 'user_contents.html', context)
+
+@login_required(login_url='/login') #check login
+def addcontent(request):
+    if request.method == 'POST':
+        form = ContentForm(request.POST, request.FILES)
+        if form.is_valid():
+            current_user = request.user
+            data = Product() #model ile baglanti kur
+            data.user_id = current_user.id
+            data.title = form.cleaned_data['title']
+            data.keywords = form.cleaned_data['keywords']
+            data.description = form.cleaned_data['description']
+            data.image = form.cleaned_data['image']
+            data.type = form.cleaned_data['type']
+            data.slug = form.cleaned_data['slug']
+            data.detail = form.cleaned_data['detail']
+            data.status = "False"
+            data.save()
+            messages.success(request, 'Content Form Error:' + str(form.errors))
+            return HttpResponseRedirect('/user/contents')
+        else:
+            messages.success(request,'Content Form Error:' + str(form.errors))
+            return  HttpResponseRedirect('/user/addcontent')
+    else:
+        category = Category.objects.all()
+        form = ContentForm()
+        menu = Menu.objects.all()
+        context = {
+            'menu': menu,
+            'category': category,
+            'form': form,
+        }
+        return render(request,'user_addcontent.html',context)

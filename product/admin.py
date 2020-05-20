@@ -20,9 +20,9 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['title', 'category', 'image_tag', 'status']
+    list_display = ['title', 'image_tag', 'status']
     readonly_fields = ('image_tag',)
-    list_filter = ['status', 'category','type']
+    list_filter = ['status','type']
     inlines = [TripImageInline]
     prepopulated_fields = {'slug': ('title',)}
 
@@ -71,7 +71,7 @@ class CommentAdmin(admin.ModelAdmin):
 
 class MenuAdmin(DraggableMPTTAdmin):
     mptt_indent_field = "title"
-    list_display = ('tree_actions', 'indented_title','status')
+    list_display = ('tree_actions', 'indented_title')
     list_filter = ['status']
 
 admin.site.register(Category, CategoryAdmin2)

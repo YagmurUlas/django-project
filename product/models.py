@@ -1,6 +1,7 @@
+from ckeditor.widgets import CKEditorWidget
 from django.contrib.auth.models import User
 from django.db import models
-from django.forms import ModelForm
+from django.forms import ModelForm, TextInput, Select, FileInput
 from django.urls import reverse
 from django.utils.safestring import mark_safe
 from ckeditor_uploader.fields import RichTextUploadingField
@@ -64,20 +65,21 @@ class Menu(MPTTModel):
             k = k.parent
         return ' > ' .join(full_path[::-1])
 
+TYPE = (
+    ('Travel', 'Travel'),
+    ('Activity', 'Activity'),
+    ('Menu', 'Menu'),
+
+)
+STATUS = (
+    ('True', 'Yes'),
+    ('False', 'No'),
+)
 
 class Product(models.Model):
-    STATUS = (
-        ('True', 'Yes'),
-        ('False', 'No'),
-    )
-    TYPE = (
-        ('Travel', 'Travel'),
-        ('Activity', 'Activity'),
-        ('Menu', 'Menu'),
-
-    )
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)  # relation with Category table
-    menu = models.ForeignKey(Menu, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
+    menu = models.ForeignKey(Menu, on_delete=models.CASCADE,null=True)
     type = models.CharField(max_length=10, choices=TYPE, default="Category")
     title = models.CharField(max_length=50)
     keywords = models.CharField(max_length=255)
@@ -104,6 +106,20 @@ class Product(models.Model):
     def get_absolute_url(self):
         return reverse('product_detail', kwargs={'slug': self.slug})
 
+class ContentForm(ModelForm):
+    class Meta:
+        model = Product
+        fields=['type','title','slug','keywords','description','image','detail']
+        widgets = {
+            'title': TextInput(attrs={'class':'input','placeholder':'title',}),
+            'slug' : TextInput(attrs={'class': 'input', 'placeholder': 'slug', }),
+            'keywords': TextInput(attrs={'class': 'input', 'placeholder': 'keywords', }),
+            'description': TextInput(attrs={'class': 'input', 'placeholder': 'description', }),
+            'type': Select(attrs={'class': 'input', 'placeholder': 'city'}, choices=TYPE),
+            'image': FileInput(attrs={'class': 'input', 'placeholder': 'image', }),
+            'detail': CKEditorWidget(),
+
+        }
 
 class Images(models.Model):
     product = models.ForeignKey(Product, on_delete=models.CASCADE)

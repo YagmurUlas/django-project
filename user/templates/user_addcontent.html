@@ -1,0 +1,67 @@
+{% extends 'homebase.html' %}
+
+{% block title %} Form AddContent - {{ profile.user_name }} {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+
+{% block head %}
+
+    <link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
+
+    {% load static %}
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor-init.js" %}"></script>
+    <script type="text/javascript" src="{% static "ckeditor/ckeditor/ckeditor.js" %}"></script>
+
+{% endblock %}
+
+{% block content %}
+
+
+    <!-- === BEGIN CONTENT === -->
+    <div id="content">
+        <div class="container background-white">
+            <div class="row margin-vert-10">
+                <!-- Side Column -->
+                <div class="col-md-2">
+                    <!-- Recent Posts -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h1 class="panel-title">User Panel</h1>
+                        </div>
+                    </div>
+                    {% include "user_panel.html" %}
+                </div>
+                <!-- Main Column -->
+                <div class="col-md-10">
+                    <!-- Recent Posts -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h1 class="panel-title">ADD CONTENT </h1>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <form method="POST" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                <fieldset class="form-group">
+                                    {{ form.media}}
+                                    {{ form.as_p }}
+                                </fieldset>
+                                <div class="form-group">
+                                    <button class="btn-primary" type="submit">SAVE</button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- End Main Column -->
+            </div>
+        </div>
+    </div>
+    <!-- === END CONTENT === -->
+
+
+{% endblock %}
+
