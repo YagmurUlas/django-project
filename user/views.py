@@ -8,7 +8,7 @@ from django.shortcuts import render, redirect
 
 # Create your views here.
 from home.models import UserProfile
-from product.models import Category, Comment, Menu, Product, ContentForm
+from product.models import Category, Comment, Menu, Product, ContentForm, ContentImageForm, Images
 from user.forms import UserUpdateForm, ProfileUpdateForm
 
 
@@ -99,7 +99,7 @@ def contents(request):
 @login_required(login_url='/login') #check login
 def addcontent(request):
     if request.method == 'POST':
-        form = ContentForm(request.POST, request.FILES)
+        form = ContentForm(request.POST, request.FILES,)
         if form.is_valid():
             current_user = request.user
             data = Product() #model ile baglanti kur
@@ -128,3 +128,68 @@ def addcontent(request):
             'form': form,
         }
         return render(request,'user_addcontent.html',context)
+
+@login_required(login_url='/login') #check login
+def contentedit(request,id):
+    content = Product.objects.get(id=id)
+    if request.method == 'POST':
+        form = ContentForm(request.POST, request.FILES, instance=content)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your Content Updated Succesfully :)')
+            return HttpResponseRedirect('/user/contents')
+        else:
+            messages.warning(request, 'Content From Error: ' + str(form.errors))
+            return HttpResponseRedirect('/user/contentedit/' + str(id))
+    else:
+        category = Category.objects.all()
+        menu = Menu.objects.all()
+        form = ContentForm(instance=content)
+        context = {
+            'menu': menu,
+            'category': category,
+            'form': form,
+        }
+        return render(request, 'user_addcontent.html',context)
+
+@login_required(login_url='/login') #check login
+def contentdelete(request,id):
+    current_user = request.user
+    Product.objects.filter(id=id, user_id=current_user.id).delete()
+    messages.success(request, 'Content deleted..')
+    return HttpResponseRedirect('/user/contents')
+
+
+def contentaddimage(request,id):
+    if request.method == 'POST':
+        lasturl = request.META.get('HTTP_REFERER')
+        form = ContentImageForm(request.POST,request.FILES)
+        if form.is_valid():
+            data = Images()
+            data.title = form.cleaned_data['title']
+            data.content_id = id
+            data.image = form.cleaned_data['image']
+            data.save()
+            messages.success(request,'Your image has been succesfully uploaded :)')
+            return HttpResponseRedirect(lasturl)
+        else:
+            messages.warning(request,'Form Error:' +str(form.errors))
+            return HttpResponseRedirect(lasturl)
+    else:
+        content = Product.objects.get(id=id)
+        images = Images.objects.filter(content_id=id)
+        form = ContentImageForm()
+        context = {
+            'content':content,
+            'images':images,
+            'form':form,
+        }
+        return render(request,'content_gallery.html',content)
+
+
+
+
+
+
+
+

@@ -7,7 +7,7 @@ from django.shortcuts import render
 
 # Create your views here.
 from home.forms import SearchForm, SignUpForm
-from home.models import Setting, ContactFormMessage, ContactForm
+from home.models import Setting, ContactFormMessage, ContactForm, FAQ
 from product.models import Product, Category, Images, Comment, Menu
 
 
@@ -19,8 +19,8 @@ def index(request):
     newimages = Product.objects.all().order_by('?')[:6]
     dayproducts = Product.objects.all().order_by('?')[:6]
     randomproducts = Product.objects.all().order_by('?')[:3]
-    activities = Product.objects.filter(type='Activity').order_by('-id')[:3]
-    travels = Product.objects.filter(type='Travel').order_by('-id')[:3]
+    activities = Product.objects.filter(type='Activity',status='True').order_by('-id')[:3]
+    travels = Product.objects.filter(type='Travel',status='True').order_by('-id')[:3]
 
     context = {'setting': setting,
                'category': category,
@@ -225,3 +225,15 @@ def error(request):
         'menu':menu,
     }
     return render(request, 'error_page.html', context)
+
+
+def faq(request):
+    menu = Menu.objects.all()
+    category = Category.objects.all()
+    faq = FAQ.objects.all().order_by('ordernumber')
+    context = {
+        'category': category,
+        'menu': menu,
+        'faq' : faq,
+    }
+    return render(request, 'faq.html', context)

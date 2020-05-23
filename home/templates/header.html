@@ -77,7 +77,7 @@
                 <div class="text-center visible-lg">
                     <ul id="hornavmenu" {% if not node.is_leaf_node %} class="nav navbar-nav" {% endif %} style="background-color: #222222">
                         <li>
-                            <a href="/" class="fa-home" style="margin-left: -15px">Anasayfa</a>
+                            <a href="/" class="fa-home" style="margin-left: -15px">HOME</a>
                         </li>
 
                         <li>
@@ -106,7 +106,7 @@
                                         <a href="/menu/{{ node.id }}" class="fa-globe">{{ node.title }}</a>
                                         {% if not node.is_leaf_node %}
                                             <ul>
-                                                 <li style="margin-top: -30px">
+                                                <li style="margin-top: -30px">
                                                     {{ children }}
                                                 </li>
                                             </ul>
@@ -117,19 +117,22 @@
                         </li>
 
                         <li>
-                            <a href="/about" class="fa-home" style="margin-left: -25px">HAKKINDA</a>
+                            <a href="/about" class="fa-home" style="margin-left: -33px">HAKKINDA</a>
                         </li>
                         <li>
-                            <a href="/references" class="fa-th" style="margin-left: -25px">REFERANSLAR</a>
+                            <a href="/references" class="fa-th" style="margin-left: -33px">REFERANSLAR</a>
                         </li>
                         <li>
-                            <a href="/contact" class="fa-comment"style="margin-left: -25px;margin-right: -25px">iletişim</a>
+                            <a href="/faq" class="fa-question" style="margin-left: -30px">SSS</a>
+                        </li>
+                        <li>
+                            <a href="/contact" class="fa-comment"style="margin-left:-30px;margin-right: -40px">iletişim</a>
                         </li>
                         <li>
                             {% if user.id is not None %}
                                 <span class="fa-user">{{ user.first_name }}</span>
                             {% else %}
-                                <span class="fa-user"><a href="/login/" style="color: #8270a4"><b>Giriş Yap</b></a> / <a href="/signup/" style="color: #8270a4"><b>Kaydol</b></a></span>
+                                <span class="fa-user" style="margin-left: 150px"><a href="/login/" style="color: #8270a4;margin-left: -5px"><b>Giriş Yap</b></a> / <a href="/signup/" style="color: #8270a4; margin-left: -2px"><b>Kaydol</b></a></span>
                             {% endif %}
 
                             {% if user.id is not None %}

@@ -111,12 +111,12 @@ class ContentForm(ModelForm):
         model = Product
         fields=['type','title','slug','keywords','description','image','detail']
         widgets = {
-            'title': TextInput(attrs={'class':'input','placeholder':'title',}),
-            'slug' : TextInput(attrs={'class': 'input', 'placeholder': 'slug', }),
-            'keywords': TextInput(attrs={'class': 'input', 'placeholder': 'keywords', }),
-            'description': TextInput(attrs={'class': 'input', 'placeholder': 'description', }),
-            'type': Select(attrs={'class': 'input', 'placeholder': 'city'}, choices=TYPE),
-            'image': FileInput(attrs={'class': 'input', 'placeholder': 'image', }),
+            'title': TextInput(attrs={'class':'form-control','placeholder':'title',}),
+            'slug' : TextInput(attrs={'class': 'form-control', 'placeholder': 'slug', }),
+            'keywords': TextInput(attrs={'class': 'form-control', 'placeholder': 'keywords', }),
+            'description': TextInput(attrs={'class': 'form-control', 'placeholder': 'description', }),
+            'type': Select(attrs={'class': 'form-control', 'placeholder': 'city'}, choices=TYPE),
+            'image': FileInput(attrs={'class': 'form-control', 'placeholder': 'image', }),
             'detail': CKEditorWidget(),
 
         }
@@ -128,6 +128,15 @@ class Images(models.Model):
 
     def __str__(self):
         return self.title
+
+    def image_tag(self):
+        return mark_safe('<img src="{}" height="50"/>'.format(self.image.url))
+    image_tag.short_description = "Image"
+
+class ContentImageForm(ModelForm):
+    class Meta:
+        model = Images
+        fields = ['title','image']
 
 
 class Comment(models.Model):

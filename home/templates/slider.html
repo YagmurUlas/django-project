@@ -16,9 +16,9 @@
                 <div class="carousel-inner">
                     {% for rs in sliderdata %}
                         <div class="item {% if forloop.counter == 1 %}active{% endif %}" id="slide{{ forloop.counter }}">
-                            <img src="{{ rs.image.url }}" style="width: 1080px; height: 300px">
+                            <a href="/product/{{ rs.id }}/{{ rs.slug }}">  <img src="{{ rs.image.url }}" style="width: 1080px; height: 300px"></a>
                             <div class="carousel-caption" style="margin-bottom: -25px">
-                                <h2 style="color: white ">{{ rs.title }}</h2>
+                                <a href="/product/{{ rs.id }}/{{ rs.slug }}"><h2 style="color: white ">{{ rs.title }}</h2></a>
                                 <p>{{ rs.keywords|safe }}</p>
                             </div>
                         </div>
