@@ -2,38 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60280f68-52c7-4552-82b0-2076267d89b5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/migrations/0009_faq.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/migrations/0010_auto_20200522_0101.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/migrations/0011_faq_ordernumber.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/home/templates/faq.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/Avrupa_4rFOVuZ.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/kapadokya-balon-turu-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/kapadokya.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/kapadokya_CI6heWS.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/kapadokya_balon.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/karadeniz_d7BdqiB.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/users/20170824_140542.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/users/20170918_124735_HDR.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/users/IMG-20170928-WA0010.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/yüzme.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/yüzme2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/uploads/images/yüzme2_bfuXprK.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/user/templates/content_gallery.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/assets/img/gallery.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/assets/img/logo3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/static/assets/img/logo4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/product/migrations/0044_auto_20200523_2309.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/China_SSmIltj.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/china-yasaksehir.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/cin-yungang_magaralari_gfWEUaO.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/cin-yungang_magaralari_llqGAd6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/swim_sea_feUm3jD.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/swimming_JvHA0wV.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/swimming_ppBbSLZ.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/uploads/images/yüzme2_XJOGQnU.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/contact.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/product_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/product_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/products.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/products.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_project/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/product/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/product/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/product/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/templates/content_gallery.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/content_gallery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/templates/user_contents.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_contents.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_panel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
@@ -254,7 +245,8 @@
       <workItem from="1589631002186" duration="70000" />
       <workItem from="1589631094849" duration="27052000" />
       <workItem from="1589914542813" duration="16033000" />
-      <workItem from="1590097776964" duration="11404000" />
+      <workItem from="1590097776964" duration="19291000" />
+      <workItem from="1590338063572" duration="23806000" />
     </task>
     <task id="LOCAL-00001" summary="header changed">
       <created>1585680473749</created>
@@ -410,7 +402,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589939181219</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="faq added">
+      <created>1590262798124</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1590262798125</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -436,7 +435,8 @@
     <MESSAGE value="menu added" />
     <MESSAGE value="menu changed" />
     <MESSAGE value="add and edit user content options added" />
-    <option name="LAST_COMMIT_MESSAGE" value="add and edit user content options added" />
+    <MESSAGE value="faq added" />
+    <option name="LAST_COMMIT_MESSAGE" value="faq added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="233" y="4" key="#Inspections" timestamp="1589487866374">
@@ -463,10 +463,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state x="389" y="201" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1280.689@0.0.1280.689" timestamp="1585669511002" />
-    <state x="420" y="0" key="CommitChangelistDialog2" timestamp="1589939179041">
+    <state x="420" y="0" key="CommitChangelistDialog2" timestamp="1590262796737">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="420" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1589939179041" />
+    <state x="420" y="0" key="CommitChangelistDialog2/0.0.1280.689@0.0.1280.689" timestamp="1590262796737" />
     <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1588167768235">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
@@ -511,10 +511,10 @@
       <screen x="0" y="0" width="1280" height="689" />
     </state>
     <state width="198" height="457" key="HiddenNamespacesPopup/0.0.1280.689@0.0.1280.689" timestamp="1588167791405" />
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1589939187088">
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2" timestamp="1590262803599">
       <screen x="0" y="0" width="1280" height="689" />
     </state>
-    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1589939187088" />
+    <state x="233" y="78" key="Vcs.Push.Dialog.v2/0.0.1280.689@0.0.1280.689" timestamp="1590262803599" />
     <state x="450" y="262" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586357846243">
       <screen x="0" y="0" width="1280" height="689" />
     </state>

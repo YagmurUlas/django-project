@@ -81,7 +81,7 @@ def contact(request):
                'category': category,}
     return render(request, 'contact.html', context)
 
-def category_products(request,id,slug):
+def category_products(request,id,slug): #content i list halinde gösterir yani product lar sırali halde gelir
     category = Category.objects.all()
     menu = Menu.objects.all()
     categorydata = Category.objects.get(pk=id)
@@ -90,7 +90,7 @@ def category_products(request,id,slug):
         context = {'products': products,
                    'menu':menu,
                    'category': category,
-                   'categorydata': categorydata
+                   'categorydata': categorydata,
                    }
         return render(request, 'products.html', context)
     else:
@@ -116,7 +116,7 @@ def product_detail(request,id,slug):
     menu = Menu.objects.all()
     try:
         product = Product.objects.get(pk=id)
-        images = Images.objects.filter(product_id=id)
+        images = Images.objects.filter(content_id=id)
         comments = Comment.objects.filter(product_id=id,status='True')
         context = {'product': product,
                    'menu': menu,
@@ -129,22 +129,13 @@ def product_detail(request,id,slug):
         link ='/error'
         return HttpResponseRedirect(link)
 
-def content_detail(request,id,slug):
-    category = Category.objects.all()
-    try:
-        product = Product.objects.filter(category_id=id)
-        link = '/product/'+str(product[0].id)+'/'+product[0].slug
-        return HttpResponseRedirect(link)
-    except:
-        link = '/error'
-        return HttpResponseRedirect(link)
 
 def product_search(request):
     if request.method == 'POST': #CHECK FORM POST
         form = SearchForm(request.POST)
         if form.is_valid():
             category = Category.objects.all()
-
+            menu = Menu.objects.all()
             query = form.cleaned_data['query'] #get form data
             catid = form.cleaned_data['catid']  # get form data
             if catid == 0:
@@ -154,6 +145,7 @@ def product_search(request):
             #return HttpResponse(products)
             context = {'products': products,
                        'category': category,
+                       'menu': menu,
                        }
             return render(request, 'products_search.html', context)
 

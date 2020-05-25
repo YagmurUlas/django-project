@@ -38,7 +38,7 @@ urlpatterns = [
     path('product/<int:id>/<slug:slug>/',views.product_detail, name='product_detail'),
     path('menu/<int:id>/',views.menu, name='menu'),
 
-    path('content/<int:id>/<slug:slug>/',views.content_detail, name='content_detail'),
+
 
     path('search/', views.product_search, name='product_search'),
     path('search_auto/', views.product_search_auto, name='product_search_auto'),

@@ -2,9 +2,7 @@
 
 <div id="body-bg">
     <ul class="social-icons pull-right hidden-xs">
-        <li class="social-rss">
-            <a href="#" target="_blank" title="RSS"></a>
-        </li>
+
         <li class="social-twitter">
             <a href="#" target="_blank" title="Twitter"></a>
         </li>
@@ -21,33 +19,34 @@
                 <!-- Logo -->
                 <div class="logo" style="width: 280px;margin-top: -7px">
                     <a href="/" title="">
-                        <img src="{% static "assets/img/logo2.png" %}" alt="Logo"/>
+                        <img src="{% static "assets/img/logo3.png" %}" alt="Logo"/>
                     </a>
                 </div>
                 <!-- End Logo -->
             </div>
 
         </div>
-        <form action="/search/" method="post" style="margin-top: -22px; margin-left: 890px; ">
+        <form action="/search/" method="post" style="margin-right: 285px;margin-left: 800px;margin-top: -30px;margin-bottom: 50px">
             {% csrf_token %}
-            <input id="query" name="query" class="input search-input" type="search" placeholder="  Enter your keyword" style="background: gainsboro;border-radius: 18px;" >
-
+            <input id="query" name="query" class="form-control" type="search" placeholder="  Enter your keyword" style="background: gainsboro;border-radius: 18px;margin-left: -80px;margin-bottom: -34px">
             {% load mptt_tags %}
 
-            <select name="catid" class="input search-categories" style="margin-left: 1px;padding-bottom: 4px; padding-top: 4px;background: gainsboro;border-radius: 18px">
-                <option value="0">All Categories</option>
-                {% recursetree category %}
-                    {% if node.is_leaf_node %}
-                        <option value="{{ node.id }}">{{ node.title }}</option>
-                    {% endif %}
-                    {% if not node.is_leaf_node %}
-                        <optgroup label="{{ node.title }}">
-                            {{ children }}
-                        </optgroup>
-                    {% endif %}
-                {% endrecursetree %}
-            </select>
-            <button class="btn-outline-success" style="border-radius: 18px;background-color: #8270a4"><i class="fa fa-search"></i></button>
+                <select name="catid" class="form-control" style="background: gainsboro;border-radius: 18px;margin-left: 100px;margin-right: -50px;margin-bottom: -33px">
+                    <option value="0">All Categories</option>
+                    {% recursetree category %}
+                        {% if node.is_leaf_node %}
+                            <option value="{{ node.id }}">{{ node.title }}</option>
+                        {% endif %}
+                        {% if not node.is_leaf_node %}
+                            <optgroup label="{{ node.title }}">
+                                {{ children }}
+                            </optgroup>
+                        {% endif %}
+                    {% endrecursetree %}
+                </select>
+
+                    <button class="btn btn-outline-success" type="submit" style="border-radius: 18px;background-color: #8270a4;margin-left: 285px;margin-right: -326px"><i class="fa fa-search" ></i></button>
+
         </form>
     </div>
     <!-- Top Menu -->
@@ -85,16 +84,17 @@
                             <ul>
                                 {% load mptt_tags %}
                                 {% recursetree category %}
-                                    <li class="parent">
-                                        <a href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
-                                        {% if not node.is_leaf_node %}
-                                            <ul>
-                                                <li style="margin-top: -23px">
-                                                    {{ children }}
-                                                </li>
-                                            </ul>
-                                        {% endif %}
-                                    </li>
+                                    {% if not node.is_leaf_node %}<li class="parent">{% endif %}
+                                    {% if node.is_leaf_node %}<li>{% endif %}
+                                <a href="/category/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
+                                {% if not node.is_leaf_node %}
+                                    <ul>
+                                        <li style="margin-top: -23px">
+                                            {{ children }}
+                                        </li>
+                                    </ul>
+                                {% endif %}
+                                </li>
                                 {% endrecursetree %}
                             </ul>
                         </li>
@@ -102,16 +102,18 @@
                         <li>
                             {% if menu %}
                                 {% recursetree menu %}
-                                    <li class="parent" style="margin-left: -20px">
-                                        <a href="/menu/{{ node.id }}" class="fa-globe">{{ node.title }}</a>
-                                        {% if not node.is_leaf_node %}
-                                            <ul>
-                                                <li style="margin-top: -30px">
-                                                    {{ children }}
-                                                </li>
-                                            </ul>
-                                        {% endif %}
-                                    </li>
+                                    {% if not node.is_leaf_node %}<li class="parent" style="margin-left: -20px">{% endif %}
+                                    {% if node.is_leaf_node %}<li>{% endif %}
+
+                                <a href="/menu/{{ node.id }}" class="fa-globe">{{ node.title }}</a>
+                                {% if not node.is_leaf_node %}
+                                    <ul>
+                                        <li style="margin-top: -30px">
+                                            {{ children }}
+                                        </li>
+                                    </ul>
+                                {% endif %}
+                                </li>
                                 {% endrecursetree %}
                             {% endif %}
                         </li>

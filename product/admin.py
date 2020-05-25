@@ -28,7 +28,8 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 class ImagesAdmin(admin.ModelAdmin):
-    list_display = ['title', 'product', 'image']
+    list_display = ['title', 'content', 'image_tag']
+    readonly_fields = ('image_tag',)
 
 
 class CategoryAdmin2(DraggableMPTTAdmin):
@@ -73,6 +74,7 @@ class MenuAdmin(DraggableMPTTAdmin):
     mptt_indent_field = "title"
     list_display = ('tree_actions', 'indented_title')
     list_filter = ['status']
+
 
 admin.site.register(Category, CategoryAdmin2)
 admin.site.register(Product, ProductAdmin)

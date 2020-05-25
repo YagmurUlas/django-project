@@ -170,7 +170,7 @@ def contentaddimage(request,id):
             data.content_id = id
             data.image = form.cleaned_data['image']
             data.save()
-            messages.success(request,'Your image has been succesfully uploaded :)')
+            messages.success(request,'Your image has been successfully uploaded :)')
             return HttpResponseRedirect(lasturl)
         else:
             messages.warning(request,'Form Error:' +str(form.errors))
@@ -184,7 +184,16 @@ def contentaddimage(request,id):
             'images':images,
             'form':form,
         }
-        return render(request,'content_gallery.html',content)
+        return render(request,'content_gallery.html',context)
+
+
+@login_required(login_url='/login') #check login
+def deleteimage(request,id):
+    lasturl = request.META.get('HTTP_REFERER')
+    Images.objects.filter(id=id).delete()
+    messages.warning(request,'Your image is deleted successfully!')
+    return HttpResponseRedirect(lasturl)
+
 
 
 

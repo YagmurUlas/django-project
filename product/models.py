@@ -122,7 +122,7 @@ class ContentForm(ModelForm):
         }
 
 class Images(models.Model):
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    content = models.ForeignKey(Product, on_delete=models.CASCADE)
     title = models.CharField(max_length=50, blank=True)
     image = models.ImageField(blank=True, upload_to='images/')
 

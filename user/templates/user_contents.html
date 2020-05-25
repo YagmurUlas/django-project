@@ -8,7 +8,7 @@
 {% endblock %}
 {% block content %}
 
-
+{% load static %}
     <!-- === BEGIN CONTENT === -->
     <div id="content">
         <div class="container background-white">
@@ -68,7 +68,9 @@
                                             <td>{{ rs.type }}</td>
                                             <td>{{ rs.menu }}</td>
                                             <td>
-                                                <a href="javascript:;" onclick="window.open('/user/contentaddimage/{{ rs.id }}','gallery',height=600,width=800,top=58,left=150)">Gallery</a>
+                                                <a href="javascript:;" onclick=window.open('/user/contentaddimage/{{ rs.id }}','gallery',"height=500,width=700,top=58,left=250")>
+                                                    <img src="{% static '' %}assets/img/gallery.png" height="40">
+                                                </a>
                                             </td>
                                             <td>{{ rs.status }}</td>
                                             <td>{{ rs.create_at }}</td>
