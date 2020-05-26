@@ -92,6 +92,7 @@ class Product(models.Model):
     shortDetail = RichTextUploadingField(max_length=1400)
     detail = RichTextUploadingField()
     status = models.CharField(max_length=10, choices=STATUS)
+    comment_num = models.IntegerField(null=True)
     parent = models.ForeignKey('self', blank=True, null=True, related_name='children', on_delete=models.CASCADE)
     create_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)

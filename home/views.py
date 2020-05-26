@@ -86,11 +86,13 @@ def category_products(request,id,slug): #content i list halinde gösterir yani p
     menu = Menu.objects.all()
     categorydata = Category.objects.get(pk=id)
     products = Product.objects.filter(category_id=id).order_by('-id')
+    recentposts = Product.objects.all().order_by('-id')[:4]
     if products:
         context = {'products': products,
                    'menu':menu,
                    'category': category,
                    'categorydata': categorydata,
+                   'recentposts': recentposts,
                    }
         return render(request, 'products.html', context)
     else:
@@ -101,10 +103,12 @@ def menu(request,id):
     category = Category.objects.all()
     menu = Menu.objects.all()
     products = Product.objects.filter(menu_id=id).order_by('-id')
+    recentposts = Product.objects.all().order_by('-id')[:10]
     if products:
         context = {'products': products,
                    'menu':menu,
                    'category':category,
+                   'recentposts':recentposts,
                    }
         return render(request, 'products.html', context)
     else:

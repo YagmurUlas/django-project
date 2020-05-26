@@ -12,65 +12,119 @@
 
     <!-- === BEGIN CONTENT === -->
     <div id="content">
-        <div class="container background-white">
-            <div class="row margin-vert-30">
+    <div class="container background-white">
+        <div class="row margin-vert-30">
             <div class="blog-post">
-                        <div id="breadcrumb">
-                            <div class="content">
-                                <ul class = "breadcrumb">
-                                    <li><a href="/">Home</a></li>
-                                    <li><a href="#">Kategoriler</a></li>
-                                     <li>{{ products.category }}</li>
-                                    <li class="active">{{ categorydata.title }}</li>
-                                </ul>
-                            </div>
-                <!-- Main Column -->
-                <div class="col-md-9">
+                <div id="breadcrumb">
+                    <div class="content">
+                        <ul class = "breadcrumb">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="#">Kategoriler</a></li>
+                            <li>{{ category.title }}</li>
+                            <li class="active">{{ categorydata.title }}</li>
+                        </ul>
+                    </div>
+                    <!-- Main Column -->
+                    <div class="col-md-9">
 
-                    {% for rs in products %}
-                        <!-- Blog Post -->
-                        <div class="blog-post padding-bottom-20">
-                            <!-- Blog Item Header -->
-                            <div class="blog-item-header">
-                                <!-- Title -->
-                                <h2>
-                                    <a href="/product/{{ rs.id }}/{{ rs.slug }}">
-                                        {{ rs.title }}</a>
-                                </h2>
+                        {% for rs in products %}
 
-                            </div>
-                            <!-- End Blog Item Header -->
-                            <!-- Blog Item Body -->
-                            <div class="blog">
-                                <div class="clearfix"></div>
-                                <div class="blog-post-body row margin-top-15">
-                                    <div class="col-md-5">
-                                        <img class="margin-bottom-20" src="{{ rs.image.url }}" alt="thumb1">
+                            <!-- Blog Post -->
+                            <div class="blog-post padding-bottom-20">
+                                <!-- Blog Item Header -->
+                                <div class="blog-item-header">
+                                    <!-- Title -->
+                                    <h2>
+                                        <a href="/product/{{ rs.id }}/{{ rs.slug }}">
+                                            {{ rs.title }}</a>
+                                    </h2>
+
+                                </div>
+                                <!-- End Blog Item Header -->
+                                <!-- Blog Item Details -->
+                                <div class="blog-post-details">
+                                    <!-- Author Name -->
+                                    <div class="blog-post-details-item blog-post-details-item-left">
+                                        <i class="fa fa-user color-gray-light"></i>
+                                        {{ user.first_name }}
                                     </div>
-                                    <div class="col-md-7">
-                                        {{ rs.description|safe }}
-                                        <!-- Read More -->
-                                        <a href="/product/{{ rs.id }}/{{ rs.slug }}" class="btn btn-violet">
-                                            Read More
-                                            <i class="icon-chevron-right readmore-icon"></i>
-                                        </a>
-                                        <!-- End Read More -->
+                                    <!-- End Author Name -->
+                                    <!-- Date -->
+                                    <div class="blog-post-details-item blog-post-details-item-left">
+                                        <i class="fa fa-calendar color-gray-light"></i>
+                                        {{ rs.create_at|date:"M D, Y" }}
+                                    </div>
+                                    <!-- End Date -->
+                                    <!-- Tags -->
+                                    <div class="blog-post-details-item blog-post-details-item-left blog-post-details-tags">
+                                        <i class="fa fa-tag color-gray-light"></i>
+                                        {{ rs.category }},{{ rs.title }},{{ rs.menu }}
+                                    </div>
+                                    <!-- End Tags -->
+                                    <!-- # of Comments -->
+                                    <div class="blog-post-details-item blog-post-details-item-left blog-post-details-item-last">
+                                        <i class="fa fa-comments color-gray-light"></i>
+                                        {{rs.comment_num}}
+                                    </div>
+                                    <!-- End # of Comments -->
+                                </div>
+                                <!-- End Blog Item Details -->
+                                <!-- Blog Item Body -->
+                                <div class="blog">
+                                    <div class="clearfix"></div>
+                                    <div class="blog-post-body row margin-top-15">
+                                        <div class="col-md-5">
+                                            <img class="margin-bottom-20" src="{{ rs.image.url }}" alt="thumb1">
+                                        </div>
+                                        <div class="col-md-7">
+                                            {{ rs.description|safe }}
+                                            <!-- Read More -->
+                                            <a href="/product/{{ rs.id }}/{{ rs.slug }}" class="btn btn-violet">
+                                                Read More
+                                                <i class="icon-chevron-right readmore-icon"></i>
+                                            </a>
+                                            <!-- End Read More -->
+                                        </div>
                                     </div>
                                 </div>
+                                <!-- End Blog Item Body -->
                             </div>
-                            <!-- End Blog Item Body -->
+                            <!-- End Blog Item -->
+                        {% endfor %}
+
+                    </div>
+                    <div class="col-md-3">
+                        <!-- Recent Posts -->
+                       <div class="blog-post-details">
+                        <br>
+                            <h3>Recent Posts</h3>
+                            {% for rs in recentposts %}
+                                <ul class="posts-list margin-top-10">
+                                    <li>
+                                        <div class="blog-post-details-item blog-post-details-item" style="text-align: center;padding-bottom: 15px">
+                                           {{ rs.title }}
+                                            <span class="recent-post-date">
+                                               &nbsp;&nbsp;<i class="fa fa-calendar color-gray-light"></i>
+                                                 &nbsp;{{ rs.create_at|date:"M D, Y" }}
+                                            </span>
+                                            <a href="/product/{{ rs.id }}/{{ rs.slug }}">
+                                                <img class="pull-center" src="{{ rs.image.url }}" alt="thumb1" style="width:160px"><br>
+                                            </a>
+
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </li>
+                                </ul>
+                            {% endfor %}
                         </div>
-                        <!-- End Blog Item -->
-
-                    {% endfor %}
-
+                        <!-- End Recent Posts -->
+                        <!-- End Main Column -->
+                        <!-- End Recent Posts -->
+                    </div>
                 </div>
-                <!-- End Main Column -->
-                <!-- End Recent Posts -->
+                <!-- End Side Column -->
             </div>
-            <!-- End Side Column -->
         </div>
-    </div>
     </div>
     <!-- === END CONTENT === -->
 
